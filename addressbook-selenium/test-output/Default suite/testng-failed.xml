@@ -6,6 +6,7 @@
       <class name="com.example.tests.ContactCreationTests">
         <methods>
           <include name="setUp"/>
+          <include name="compareSumCountContacts"/>
           <include name="tearDown"/>
           <include name="testNonEmptyContactCreation"/>
         </methods>

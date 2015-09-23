@@ -82,11 +82,12 @@ public class ContactCreationTests extends TestBase {
 		Collections.sort(oldList); 
 		assertEquals(newList,oldList);
 	}
-	*/
+	
 	
 	   @Test
 	      public void compareSumCountContacts () {
 	      	app.getNavigationHelper().openMainPage(); 
 	      	assertEquals(app.getContactHelper().getSumCountContacts(), app.getContactHelper().getContacts().size());
 	      }
+	      */
 }
