@@ -5,6 +5,7 @@ import java.util.List;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import com.example.tests.ContactData;
+import com.example.tests.GroupData;
 
 public class ContactHelper extends HelperBase {
 
@@ -53,7 +54,6 @@ public class ContactHelper extends HelperBase {
 
 	public void gotoContactUpdatePage() {
 		click(By.xpath(".//*[@id='maintable']/tbody/tr[2]/td[7]/a/img"));
-
 	}
 	
 	public List<ContactData> getContacts() {
@@ -67,6 +67,7 @@ public class ContactHelper extends HelperBase {
 				}
 				return contacts;
 		 	}
+
 	public int getSumCountContacts() {
 		int sumCountContacts = Integer.parseInt(driver.findElement(By.id("search_count")).getText());
 		return sumCountContacts;	

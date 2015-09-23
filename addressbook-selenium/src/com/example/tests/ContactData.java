@@ -36,16 +36,20 @@ public class ContactData implements Comparable<ContactData>{
 	}
 	public ContactData() {
 	}
-	@Override
-	public String toString() {
-		return "ContactData [lastName=" + lastName + "]";
-	}
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
 		result = prime * result + ((lastName == null) ? 0 : lastName.hashCode());
 		return result;
+	}
+	@Override
+	public String toString() {
+		return "ContactData [firstName=" + firstName + ", lastName=" + lastName + ", address=" + address
+				+ ", phoneHome=" + phoneHome + ", phoneMobile=" + phoneMobile + ", phoneWork=" + phoneWork
+				+ ", email_1=" + email_1 + ", email_2=" + email_2 + ", bDay=" + bDay + ", bMonth=" + bMonth + ", bYear="
+				+ bYear + ", groupName=" + groupName + ", address_2=" + address_2 + ", phoneOther=" + phoneOther + "]";
 	}
 	@Override
 	public boolean equals(Object obj) {

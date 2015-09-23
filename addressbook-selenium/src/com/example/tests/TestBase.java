@@ -38,13 +38,41 @@ public class TestBase {
 		}
 		return list.iterator();
 	}
-
+	@DataProvider
+	public Iterator<Object[]> randomValidContactGenerator(){
+		List<Object[]> list = new ArrayList<Object[]>();
+		Random rnd = new Random ();
+		for (int i=0;i<5;i++){
+			ContactData contact = new ContactData();
+			contact.firstName = generateRandomString();
+			contact.lastName = generateRandomString();
+			contact.address = generateRandomString();
+			contact.phoneHome = generateRandomString();
+			contact.phoneMobile = generateRandomString();
+			contact.phoneWork = generateRandomString();
+			contact.email_1 = generateRandomMail();
+			contact.email_2 = generateRandomMail();
+			contact.address_2 = generateRandomString();
+			contact.phoneOther = generateRandomString();
+			list.add(new Object[]{contact});
+		}
+		return list.iterator();
+	}
 	public String generateRandomString(){
 		Random rnd = new Random ();
-		if(rnd.nextInt(3) == 0 ){
+		if(rnd.nextInt(7) == 0 ){
 			return "";
 		} else {
 			return "test" + rnd.nextInt();
 		}
 	}
+	public String generateRandomMail(){
+		Random rnd = new Random ();
+		if(rnd.nextInt(2) == 0 ){
+			return "";
+		} else {
+			return "mail" + rnd.nextInt()+ "@aol.com";
+		}
+	}
+
 }
