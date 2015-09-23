@@ -5,7 +5,7 @@ import java.util.List;
 import static org.testng.Assert.assertEquals;
 import org.testng.annotations.Test;
 
-public class GroupCreationTests extends TestBase{
+public class GroupCreationTests extends TestBase {
 	
 	@Test(dataProvider ="randomValidGroupGenerator")
 	public void testGroupCreationWithValidDate(GroupData group) throws Exception {

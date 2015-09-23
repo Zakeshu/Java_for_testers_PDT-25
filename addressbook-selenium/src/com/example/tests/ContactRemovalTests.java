@@ -10,14 +10,15 @@ import org.testng.annotations.Test;
 
 public class ContactRemovalTests extends TestBase{
 	@Test
-	public void modifySomeGroup (){
+	public void removeSomeContacts () {
 		app.getNavigationHelper().openMainPage();
 		
 		//save old state
 		List<ContactData> oldList = app.getContactHelper().getContacts();
+		
 		Random rnd = new Random ();
 		int index = rnd.nextInt(oldList.size()-1);
-		app.getContactHelper().gotoContactUpdatePage();
+		app.getContactHelper().gotoContactUpdatePage(index);
 		app.getContactHelper().deleteContact();
 		app.getNavigationHelper().openMainPage();
 		

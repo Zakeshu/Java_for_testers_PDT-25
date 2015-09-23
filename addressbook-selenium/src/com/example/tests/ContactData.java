@@ -44,6 +44,7 @@ public class ContactData implements Comparable<ContactData>{
 		result = prime * result + ((lastName == null) ? 0 : lastName.hashCode());
 		return result;
 	}
+	
 	@Override
 	public String toString() {
 		return "ContactData [firstName=" + firstName + ", lastName=" + lastName + ", address=" + address

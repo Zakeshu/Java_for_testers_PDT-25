@@ -3,9 +3,7 @@ package com.example.fw;
 import java.util.ArrayList;
 import java.util.List;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 import com.example.tests.ContactData;
-import com.example.tests.GroupData;
 
 public class ContactHelper extends HelperBase {
 
@@ -52,8 +50,8 @@ public class ContactHelper extends HelperBase {
 		click(By.xpath("//input[@value='Update']"));
 	}
 
-	public void gotoContactUpdatePage() {
-		click(By.xpath(".//*[@id='maintable']/tbody/tr[2]/td[7]/a/img"));
+	public void gotoContactUpdatePage(int index) {
+		click(By.xpath("//tr[@name='entry']["+(index+1)+"]/td/a/img[@title='Edit']/.."));
 	}
 	
 	public List<ContactData> getContacts() {

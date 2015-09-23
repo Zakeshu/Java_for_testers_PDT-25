@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Random;
-
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
@@ -42,7 +41,7 @@ public class TestBase {
 	public Iterator<Object[]> randomValidContactGenerator(){
 		List<Object[]> list = new ArrayList<Object[]>();
 		Random rnd = new Random ();
-		for (int i=0;i<5;i++){
+		for (int i=0;i<2;i++){
 			ContactData contact = new ContactData();
 			contact.firstName = generateRandomString();
 			contact.lastName = generateRandomString();
@@ -54,13 +53,16 @@ public class TestBase {
 			contact.email_2 = generateRandomMail();
 			contact.address_2 = generateRandomString();
 			contact.phoneOther = generateRandomString();
+			contact.bDay =generateRandomDay();
+			contact.bMonth =generateRandomMonth();
+			contact.bYear =generateRandomYear();
 			list.add(new Object[]{contact});
 		}
 		return list.iterator();
 	}
 	public String generateRandomString(){
 		Random rnd = new Random ();
-		if(rnd.nextInt(7) == 0 ){
+		if(rnd.nextInt(3) == 0 ){
 			return "";
 		} else {
 			return "test" + rnd.nextInt();
@@ -73,6 +75,20 @@ public class TestBase {
 		} else {
 			return "mail" + rnd.nextInt()+ "@aol.com";
 		}
+	}
+	public String generateRandomDay() {
+		Random rnd =new Random();
+		return Integer.toString(rnd.nextInt(31));
+	}
+	public String generateRandomMonth() {
+		Random rnd =new Random();
+		String[] monthList = new String[] {"January","February","March","April","May","June","July", "August","September","October", "November", "December"};
+		int index = rnd.nextInt(11);
+		return monthList[index];
+	}
+	public String generateRandomYear() {
+		Random rnd =new Random();
+		return Integer.toString(1900+rnd.nextInt(100));
 	}
 
 }

@@ -7,7 +7,6 @@ import org.testng.annotations.Test;
 
 public class ContactCreationTests extends TestBase {
 
-
 	@Test(dataProvider ="randomValidContactGenerator")
 	public void testNonEmptyContactCreation(ContactData contact) throws Exception {
 		app.getNavigationHelper().openMainPage();
