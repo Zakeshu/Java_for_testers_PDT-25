@@ -38,7 +38,7 @@ public class ContactData implements Comparable<ContactData>{
 	}
 	@Override
 	public String toString() {
-		return "GroupData [phoneOther=" + phoneOther + "]";
+		return "ContactData [lastName=" + lastName + "]";
 	}
 	@Override
 	public int hashCode() {
@@ -56,15 +56,15 @@ public class ContactData implements Comparable<ContactData>{
 		if (getClass() != obj.getClass())
 			return false;
 		ContactData other = (ContactData) obj;
-		if (phoneOther == null) {
-			if (other.phoneOther != null)
+		if (lastName == null) {
+			if (other.lastName != null)
 				return false;
-		} else if (!phoneOther.equals(other.phoneOther))
+		} else if (!lastName.equals(other.lastName))
 			return false;
 		return true;
 	}
 	@Override
 	public int compareTo(ContactData other) {
-		return this.phoneOther.toLowerCase().compareTo(other.phoneOther.toLowerCase());
+		return this.lastName.toLowerCase().compareTo(other.lastName.toLowerCase());
 	}
 }

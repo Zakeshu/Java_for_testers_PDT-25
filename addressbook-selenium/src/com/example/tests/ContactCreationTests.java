@@ -1,6 +1,10 @@
 package com.example.tests;
 
+import static org.testng.Assert.assertEquals;
+import java.util.Collections;
+import java.util.List;
 import org.testng.annotations.Test;
+
 public class ContactCreationTests extends TestBase {
 
 
@@ -8,6 +12,11 @@ public class ContactCreationTests extends TestBase {
 	public void testNonEmptyContactCreation() throws Exception {
 		app.getNavigationHelper().openMainPage();
 		app.getContactHelper().openContactPage();
+		
+		//save old state
+		List<ContactData> oldList = app.getContactHelper().getContacts();
+		
+		// actions 
 		ContactData contact = new ContactData();
 		contact.firstName = "Alex";
 		contact.lastName = "Zakeshi";
@@ -26,12 +35,25 @@ public class ContactCreationTests extends TestBase {
 		app.getContactHelper().fillContactForm(contact);
 		app.getContactHelper().submitContactCreation();
 		app.getContactHelper().returnToHomePage();
-	}
+		
+		//save new state
+		List<ContactData> newList = app.getContactHelper().getContacts();
 
+		//compare states		
+		oldList.add(contact);
+		Collections.sort(oldList);  
+		assertEquals(newList,oldList);
+	}
+/*
 	@Test
 	public void testEmptyContactCreation() throws Exception {
 		app.getNavigationHelper().openMainPage();
 		app.getContactHelper().openContactPage();
+		
+		//save old state
+		List<ContactData> oldList = app.getContactHelper().getContacts();
+		
+		// actions 
 		ContactData contact = new ContactData();
 		contact.firstName = "";
 		contact.lastName = "";
@@ -50,5 +72,14 @@ public class ContactCreationTests extends TestBase {
 		app.getContactHelper().fillContactForm(contact);
 		app.getContactHelper().submitContactCreation();
 		app.getContactHelper().returnToHomePage();
+		
+		//save new state
+		List<ContactData> newList = app.getContactHelper().getContacts();
+
+		//compare states		
+		oldList.add(contact);
+		Collections.sort(oldList); 
+		assertEquals(newList,oldList);
 	}
+	*/
 }
