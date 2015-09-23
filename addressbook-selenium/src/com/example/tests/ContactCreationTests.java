@@ -41,7 +41,8 @@ public class ContactCreationTests extends TestBase {
 
 		//compare states		
 		oldList.add(contact);
-		Collections.sort(oldList);  
+		Collections.sort(oldList); 
+		Collections.sort(newList);
 		assertEquals(newList,oldList);
 	}
 /*
@@ -82,4 +83,10 @@ public class ContactCreationTests extends TestBase {
 		assertEquals(newList,oldList);
 	}
 	*/
+	
+	   @Test
+	      public void compareSumCountContacts () {
+	      	app.getNavigationHelper().openMainPage(); 
+	      	assertEquals(app.getContactHelper().getSumCountContacts(), app.getContactHelper().getContacts().size());
+	      }
 }

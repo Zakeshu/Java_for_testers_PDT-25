@@ -55,15 +55,22 @@ public class ContactHelper extends HelperBase {
 		click(By.xpath(".//*[@id='maintable']/tbody/tr[2]/td[7]/a/img"));
 
 	}
+	
 	public List<ContactData> getContacts() {
-		List<ContactData> contacts = new ArrayList<ContactData>();
-		List<WebElement> checkboxes = driver.findElements(By.name("selected[]"));
-		for (WebElement checkbox : checkboxes) {
-			ContactData contact = new ContactData();
-			String title = checkbox.getAttribute("title"); 
-			contact.lastName = title.substring("Select (Alex ".length(), title.length() - ")".length());
-			contacts.add(contact);
-		}
-		return contacts;
+				List<ContactData> contacts = new ArrayList<ContactData>();
+				int numberRows = driver.findElements(By.xpath("//tr[@name='entry']")).size();
+				for (int i = 0; i < numberRows; i++) {
+					ContactData contact = new ContactData();
+					contact.firstName  = driver.findElement(By.xpath("//tr[@name='entry']["+(i+1)+"]/td[3]")).getText();
+					contact.lastName  =  driver.findElement(By.xpath("//tr[@name='entry']["+(i+1)+"]/td[2]")).getText();
+					contacts.add(contact);
+				}
+				return contacts;
+		 	}
+	public int getSumCountContacts() {
+		int sumCountContacts = Integer.parseInt(driver.findElement(By.id("search_count")).getText());
+		return sumCountContacts;	
 	}
+	
+	
 }
