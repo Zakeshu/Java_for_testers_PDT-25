@@ -5,7 +5,6 @@ import java.util.Collections;
 import java.util.List;
 import org.testng.annotations.Test;
 import static com.example.fw.ContactHelper.CREATION;
-import com.example.utils.ListOf;
 import com.example.utils.SortedListOf;
 
 public class ContactCreationTests extends TestBase {

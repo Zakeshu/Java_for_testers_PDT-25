@@ -1,10 +1,6 @@
 package com.example.tests;
 
-import com.example.utils.ListOf;
 import com.example.utils.SortedListOf;
-import java.util.Collections;
-import java.util.List;
-import static org.testng.Assert.assertEquals;
 import org.testng.annotations.Test;
 import static org.junit.Assert.assertThat;
 import static org.hamcrest.Matchers.*;
@@ -19,6 +15,10 @@ public class GroupCreationTests extends TestBase {
 
 		// actions
 		app.getGroupHelper().createGroup(group);
+//		app.getGroupHelper().initGroupCreation();
+// 		app.getGroupHelper().fillGroupForm(group);
+// 		app.getGroupHelper().submitGroupCreation();
+// 		app.getGroupHelper().returnToGroupsPage();
 		
 		//save new state
 		SortedListOf<GroupData> newList = app.getGroupHelper().getGroups();

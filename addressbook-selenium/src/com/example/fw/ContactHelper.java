@@ -84,8 +84,10 @@ public class ContactHelper extends HelperBase {
 				int numberRows = driver.findElements(By.xpath("//tr[@name='entry']")).size();
 				for (int i = 0; i < numberRows; i++) {
 					ContactData contact = new ContactData();
-					contact.withFirstName  = driver.findElement(By.xpath("//tr[@name='entry']["+(i+1)+"]/td[3]")).getText();
-					contact.withLastName  =  driver.findElement(By.xpath("//tr[@name='entry']["+(i+1)+"]/td[2]")).getText();
+//					contact.withFirstName  = driver.findElement(By.xpath("//tr[@name='entry']["+(i+1)+"]/td[3]")).getText();
+//					contact.withLastName  =  driver.findElement(By.xpath("//tr[@name='entry']["+(i+1)+"]/td[2]")).getText();
+					contact.withFirstName  (driver.findElement(By.xpath("//tr[@name='entry']["+(i+1)+"]/td[3]")).getText());
+					contact.withLastName ( driver.findElement(By.xpath("//tr[@name='entry']["+(i+1)+"]/td[2]")).getText());
 					contacts.add(contact);
 				}
 				return contacts;

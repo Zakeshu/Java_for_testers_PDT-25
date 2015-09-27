@@ -47,22 +47,21 @@ public class TestBase {
 		List<Object[]> list = new ArrayList<Object[]>();
 		Random rnd = new Random ();
 		for (int i=0;i<2;i++){
-			ContactData contact = new ContactData ();
+			ContactData contact = new ContactData ()
+			.withFirstName  (generateRandomString())
+			.withLastName  (generateRandomString())
+			.withAddress  (generateRandomString())
+			.withPhoneHome  (generateRandomString())
+			.withPhoneMobile  (generateRandomString())
+			.withPhoneWork  (generateRandomString())
+			.withEmail_1  (generateRandomMail())
+			.withEmail_2  (generateRandomMail())
+			.withAddress_2  (generateRandomString())
+			.withPhoneOther  (generateRandomString())
+			.withBDay  (generateRandomDay())
+			.withBMonth  (generateRandomMonth())
+			.withBYear (generateRandomYear());
 			/*
-			.withFirstName = (generateRandomString())
-			.withLastName = (generateRandomString())
-			.withAddress = (generateRandomString())
-			.withPhoneHome = (generateRandomString())
-			.withPhoneMobile = (generateRandomString())
-			.withPhoneWork = (generateRandomString())
-			.withEmail_1 = (generateRandomMail())
-			.withEmail_2 = (generateRandomMail())
-			.withAddress_2 = (generateRandomString())
-			.withPhoneOther = (generateRandomString())
-			.withBDay = (generateRandomDay())
-			.withBMonth = (generateRandomMonth())
-			.withBYear = (generateRandomYear());
-			*/
 			contact.firstName = generateRandomString();
 			contact.lastName = generateRandomString();
 			contact.address = generateRandomString();
@@ -76,7 +75,7 @@ public class TestBase {
 			contact.bDay =generateRandomDay();
 			contact.bMonth =generateRandomMonth();
 			contact.bYear =generateRandomYear();
-		
+		*/
 			list.add(new Object[]{contact});
 		}
 		return list.iterator();

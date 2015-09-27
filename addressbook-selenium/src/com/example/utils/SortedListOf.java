@@ -5,6 +5,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Random;
 
+import com.example.tests.GroupData;
 import com.google.common.collect.ForwardingList;
 import com.google.common.collect.Lists;
 
@@ -51,8 +52,7 @@ public class SortedListOf<T extends Comparable<T>> extends ForwardingList<T> {
     Collections.sort(newItems.list);
     return newItems;
   }
-
-  public SortedListOf<T> without(T item) {
+   public SortedListOf<T> without(T item) {
     SortedListOf<T> newItems = new SortedListOf<T>();
     newItems.list = Lists.newArrayList(this.list);
     newItems.list.remove(item);
