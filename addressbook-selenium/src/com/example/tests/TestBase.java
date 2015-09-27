@@ -7,7 +7,8 @@ import java.util.Random;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
-
+import com.example.tests.GroupData;
+import com.example.tests.ContactData;
 import com.example.fw.ApplicationManager;
 public class TestBase {
 
@@ -29,20 +30,39 @@ public class TestBase {
 		List<Object[]> list = new ArrayList<Object[]>();
 		Random rnd = new Random ();
 		for (int i=0;i<5;i++){
-			GroupData group = new GroupData();
-			group.name = generateRandomString();
-			group.header = generateRandomString();
-			group.footer = generateRandomString();;
+			GroupData group = new GroupData()
+			.withName (generateRandomString())
+			.withHeader (generateRandomString())
+			.withFooter (generateRandomString());
+			/*
+			 * group.name = generateRandomString();
+			 */
 			list.add(new Object[]{group});
 		}
 		return list.iterator();
 	}
+
 	@DataProvider
 	public Iterator<Object[]> randomValidContactGenerator(){
 		List<Object[]> list = new ArrayList<Object[]>();
 		Random rnd = new Random ();
 		for (int i=0;i<2;i++){
-			ContactData contact = new ContactData();
+			ContactData contact = new ContactData()
+			
+			.withFirstName = (generateRandomString())
+			.withLastName = (generateRandomString())
+			.withAddress = (generateRandomString())
+			.withPhoneHome = (generateRandomString())
+			.withPhoneMobile = (generateRandomString())
+			.withPhoneWork = (generateRandomString())
+			.withEmail_1 = (generateRandomMail())
+			.withEmail_2 = (generateRandomMail())
+			.withAddress_2 = (generateRandomString())
+			.withPhoneOther = (generateRandomString())
+			.withBDay = (generateRandomDay())
+			.withBMonth = (generateRandomMonth())
+			.withBYear = (generateRandomYear());
+				/*
 			contact.firstName = generateRandomString();
 			contact.lastName = generateRandomString();
 			contact.address = generateRandomString();
@@ -56,6 +76,7 @@ public class TestBase {
 			contact.bDay =generateRandomDay();
 			contact.bMonth =generateRandomMonth();
 			contact.bYear =generateRandomYear();
+		*/
 			list.add(new Object[]{contact});
 		}
 		return list.iterator();
