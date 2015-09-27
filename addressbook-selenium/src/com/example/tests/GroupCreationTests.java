@@ -6,20 +6,21 @@ import static org.testng.Assert.assertEquals;
 import org.testng.annotations.Test;
 
 public class GroupCreationTests extends TestBase {
-	
+
 	@Test(dataProvider ="randomValidGroupGenerator")
 	public void testGroupCreationWithValidDate(GroupData group) throws Exception {
-		app.getNavigationHelper().openMainPage();
-		app.getNavigationHelper().gotoGroupPage();
+		app.navigateTo().mainPage();
+		app.navigateTo().groupPage();
 
 		//save old state
 		List<GroupData> oldList = app.getGroupHelper().getGroups();
 
 		// actions
-		app.getGroupHelper().initGroupCreation();
-		app.getGroupHelper().fillGroupForm(group);
-		app.getGroupHelper().submitGroupCreation();
-		app.getGroupHelper().returnToGroupsPage();
+		app.getGroupHelper()
+		.initGroupCreation()
+		.fillGroupForm(group) 
+		.submitGroupCreation()
+		.returnToGroupsPage();
 
 		//save new state
 		List<GroupData> newList = app.getGroupHelper().getGroups();
