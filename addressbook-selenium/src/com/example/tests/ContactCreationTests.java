@@ -5,7 +5,8 @@ import java.util.Collections;
 import java.util.List;
 import org.testng.annotations.Test;
 import static com.example.fw.ContactHelper.CREATION;
-
+import com.example.utils.ListOf;
+import com.example.utils.SortedListOf;
 
 public class ContactCreationTests extends TestBase {
 
@@ -16,11 +17,8 @@ public class ContactCreationTests extends TestBase {
 		List<ContactData> oldList = app.getContactHelper().getContacts();
 
 		// actions 
-		app.getContactHelper()
-		.openContactPage()
-		.fillContactForm(contact,CREATION)
-		.submitContactCreation()
-		.returnToHomePage();
+		app.getContactHelper().createContact(contact);
+
 		
 		//save new state
 		List<ContactData> newList = app.getContactHelper().getContacts();

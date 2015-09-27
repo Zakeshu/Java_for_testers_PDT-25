@@ -1,7 +1,7 @@
 package com.example.tests;
 
 public class ContactData implements Comparable<ContactData>{
-	/*
+	
 	public String firstName;
 	public String lastName;
 	public String address;
@@ -16,7 +16,7 @@ public class ContactData implements Comparable<ContactData>{
 	public String groupName;
 	public String address_2;
 	public String phoneOther;
-*/
+/*
 	 	private String firstName;
 	private String lastName;
 	private String address;
@@ -31,7 +31,7 @@ public class ContactData implements Comparable<ContactData>{
 	private String groupName;
 	private String address_2;
 	private String phoneOther;
-
+*/
 
 	public ContactData(String firstName, String lastName, String address, String phoneHome, String phoneMobile,
 			String phoneWork, String email_1, String email_2, String bDay, String bMonth, String bYear,

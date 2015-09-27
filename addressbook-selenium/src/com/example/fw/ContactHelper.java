@@ -1,10 +1,13 @@
 package com.example.fw;
 
+import static com.example.fw.ContactHelper.CREATION;
+
 import java.util.ArrayList;
 import java.util.List;
 import org.openqa.selenium.By;
 import com.example.tests.ContactData;
-
+import com.example.utils.ListOf;
+import com.example.utils.SortedListOf;
 public class ContactHelper extends HelperBase {
 
 	public static boolean CREATION = true;
@@ -14,7 +17,12 @@ public class ContactHelper extends HelperBase {
 	public ContactHelper(ApplicationManager manager) {
 		super(manager);
 	}
-
+	public void createContact(ContactData contact) {
+		openContactPage();
+		fillContactForm(contact,CREATION);
+		submitContactCreation();
+		returnToHomePage();
+	}
 	public ContactHelper openContactPage() {
 		click(By.linkText("add new"));
 		return this;
@@ -76,8 +84,8 @@ public class ContactHelper extends HelperBase {
 				int numberRows = driver.findElements(By.xpath("//tr[@name='entry']")).size();
 				for (int i = 0; i < numberRows; i++) {
 					ContactData contact = new ContactData();
-					contact.getFirstName  = driver.findElement(By.xpath("//tr[@name='entry']["+(i+1)+"]/td[3]")).getText();
-					contact.getLastName  =  driver.findElement(By.xpath("//tr[@name='entry']["+(i+1)+"]/td[2]")).getText();
+					contact.withFirstName  = driver.findElement(By.xpath("//tr[@name='entry']["+(i+1)+"]/td[3]")).getText();
+					contact.withLastName  =  driver.findElement(By.xpath("//tr[@name='entry']["+(i+1)+"]/td[2]")).getText();
 					contacts.add(contact);
 				}
 				return contacts;
@@ -99,6 +107,8 @@ public class ContactHelper extends HelperBase {
 		int sumCountContacts = Integer.parseInt(driver.findElement(By.id("search_count")).getText());
 		return sumCountContacts;	
 	}
+
+
 	
 	
 }

@@ -9,11 +9,27 @@ public class NavigationHelper extends HelperBase {
 	}
 
 	public void mainPage() {
-		driver.get(manager.baseUrl + "/addressbookv4.1.4/");
+		if(! onMainPage()){ 
+		click(By.linkText("home"));
+		}	
 	}
 
-	public void groupPage() {
-		click(By.linkText("groups"));
+	private boolean onMainPage() {
+		return	 driver.findElements(By.id("maintable")).size() >0;
 	}
 
+	public void groupsPage() {
+		if(! onGroupsPage()){ 
+			click(By.linkText("groups"));
+		}
+	}
+
+	private boolean onGroupsPage() {
+		if ( driver.getCurrentUrl().contains("/group.php")
+				&& driver.findElements(By.name("new")).size() >0){
+					return true;
+				} else {
+		return false;
+		}
+	}
 }

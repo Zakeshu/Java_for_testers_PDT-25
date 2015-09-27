@@ -5,32 +5,29 @@ import static org.testng.Assert.assertEquals;
 import java.util.Collections;
 import java.util.List;
 import java.util.Random;
-
+import com.example.utils.ListOf;
+import com.example.utils.SortedListOf;
 import org.testng.annotations.Test;
-
+import static org.junit.Assert.assertThat;
+import static org.hamcrest.Matchers.*;
 public class GroupRemovalTests  extends TestBase {
 	@Test
 	public void deleteSomeGroup (){
-		app.navigateTo().mainPage();
-		app.navigateTo().groupPage();
-		 
+
 		//save old state
-		List<GroupData> oldList = app.getGroupHelper().getGroups();
+		SortedListOf<GroupData> oldList = app.getGroupHelper().getGroups();
 		
 		Random rnd = new Random ();
 		int index = rnd.nextInt(oldList.size()-1); 
 		
 		// actions
-		app.getGroupHelper()
-		.deleteGroup(index)
-		.returnToGroupsPage();
+		app.getGroupHelper().deleteGroup(index);
 		
 		//save new state
-		List<GroupData> newList = app.getGroupHelper().getGroups();
+		SortedListOf<GroupData> newList = app.getGroupHelper().getGroups();
 		
 		//compare states
-		oldList.remove(index);
-		Collections.sort(oldList); 
-		assertEquals(newList,oldList);	
-	}
+		assertThat(newList,equalTo(oldList.without(index)));
+	
+	} 
 }

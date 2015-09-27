@@ -5,7 +5,8 @@ import static org.testng.Assert.assertEquals;
 import java.util.Collections;
 import java.util.List;
 import java.util.Random;
-
+import com.example.utils.ListOf;
+import com.example.utils.SortedListOf;
 import org.testng.annotations.Test;
 
 public class ContactRemovalTests extends TestBase{
@@ -18,7 +19,8 @@ public class ContactRemovalTests extends TestBase{
 		
 		Random rnd = new Random ();
 		int index = rnd.nextInt(oldList.size()-1);
-		app.getContactHelper().gotoContactUpdatePage(index);
+		app.getContactHelper()
+		.gotoContactUpdatePage(index);
 		app.getContactHelper().deleteContact();
 		app.navigateTo().mainPage();
 		
