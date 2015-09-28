@@ -15,11 +15,7 @@ public class GroupCreationTests extends TestBase {
 
 		// actions
 		app.getGroupHelper().createGroup(group);
-//		app.getGroupHelper().initGroupCreation();
-// 		app.getGroupHelper().fillGroupForm(group);
-// 		app.getGroupHelper().submitGroupCreation();
-// 		app.getGroupHelper().returnToGroupsPage();
-		
+
 		//save new state
 		SortedListOf<GroupData> newList = app.getGroupHelper().getGroups();
 

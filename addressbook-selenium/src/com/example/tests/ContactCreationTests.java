@@ -19,15 +19,10 @@ public class ContactCreationTests extends TestBase {
 		// actions 
 		app.getContactHelper().createContact(contact);
 
-		
 		//save new state
 		SortedListOf<ContactData> newList = app.getContactHelper().getContacts();
 		
 		//compare states		
-//		oldList.add(contact);
-//		Collections.sort(oldList); 
-		Collections.sort(newList);
-//		assertEquals(newList,oldList);
 		assertThat(newList,equalTo(oldList.withAdded(contact)));
 	}
 

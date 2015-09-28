@@ -1,11 +1,7 @@
 package com.example.tests;
 
-import static org.testng.Assert.assertEquals;
 
-import java.util.Collections;
-import java.util.List;
 import java.util.Random;
-import com.example.utils.ListOf;
 import com.example.utils.SortedListOf;
 import org.testng.annotations.Test;
 import static org.junit.Assert.assertThat;
@@ -28,6 +24,5 @@ public class GroupRemovalTests  extends TestBase {
 		
 		//compare states
 		assertThat(newList,equalTo(oldList.without(index)));
-	
 	} 
 }
