@@ -5,7 +5,10 @@ import static com.example.fw.ContactHelper.CREATION;
 import java.util.ArrayList;
 import java.util.List;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+
 import com.example.tests.ContactData;
+import com.example.tests.GroupData;
 import com.example.utils.ListOf;
 import com.example.utils.SortedListOf;
 public class ContactHelper extends HelperBase {
@@ -17,12 +20,72 @@ public class ContactHelper extends HelperBase {
 	public ContactHelper(ApplicationManager manager) {
 		super(manager);
 	}
-	public void createContact(ContactData contact) {
+
+	/*
+	public List<ContactData> getContacts() {
+		List<ContactData> contacts = new ArrayList<ContactData>();
+		int numberRows = driver.findElements(By.xpath("//tr[@name='entry']")).size();
+		for (int i = 0; i < numberRows; i++) {
+			ContactData contact = new ContactData();			
+			contact.withFirstName  (driver.findElement(By.xpath("//tr[@name='entry']["+(i+1)+"]/td[3]")).getText());
+			contact.withLastName ( driver.findElement(By.xpath("//tr[@name='entry']["+(i+1)+"]/td[2]")).getText());
+			contacts.add(contact);
+		}
+		return contacts;
+ 	}	
+	*/
+//--------------------------------------
+	
+	private SortedListOf<ContactData> cachedContacts;
+	
+	public SortedListOf<ContactData> getContacts() {
+		if(cachedContacts == null){
+			rebuildCache();
+		}
+		return cachedContacts;
+		
+	}
+
+	private void rebuildCache() {
+		cachedContacts = new SortedListOf<ContactData>();
+		int numberRows = driver.findElements(By.xpath("//tr[@name='entry']")).size();
+		for (int i = 0; i < numberRows; i++) {
+			ContactData contact = new ContactData();
+			contact.withFirstName(driver.findElement(By.xpath("//tr[@name='entry']["+(i+1)+"]/td[3]")).getText());
+			contact.withLastName(driver.findElement(By.xpath("//tr[@name='entry']["+(i+1)+"]/td[2]")).getText());
+			cachedContacts.add(contact);
+		}
+	}
+
+	//------------------------------------------------------------------
+	public ContactHelper createContact(ContactData contact) {
+		manager.navigateTo().mainPage();
 		openContactPage();
 		fillContactForm(contact,CREATION);
 		submitContactCreation();
 		returnToHomePage();
+		//rebuildCache();
+		return this;
 	}
+
+	public ContactHelper deleteContact(int index) {
+		gotoContactUpdatePage(index);
+		submitContactRemove();
+		returnToHomePage();
+		rebuildCache();
+		return this;
+	}
+	public ContactHelper modifyContact(int index, ContactData contact) {
+		  manager.navigateTo().mainPage();
+		    gotoContactUpdatePage(index);
+	        fillContactForm(contact, true);
+	        initContactModification();
+	        returnToHomePage();
+	       rebuildCache();
+	        return this;
+		
+	}
+//--------------------------------------	
 	public ContactHelper openContactPage() {
 		click(By.linkText("add new"));
 		return this;
@@ -64,51 +127,26 @@ public class ContactHelper extends HelperBase {
 		return this;
 	}
 
-	//public void deleteContact(int index ) {
-	public ContactHelper deleteContact() {
+
+	public void submitContactRemove() {
 		click(By.xpath("//input[@value='Delete']"));
-		return this;
 	}
 
 	public ContactHelper initContactModification() {
 		click(By.xpath("//input[@value='Update']"));
+	
 		return this;
 	}
 
 	public void gotoContactUpdatePage(int index) {
 		click(By.xpath("//tr[@name='entry']["+(index+1)+"]/td/a/img[@title='Edit']/.."));
 	}
-	
-	public List<ContactData> getContacts() {
-				List<ContactData> contacts = new ArrayList<ContactData>();
-				int numberRows = driver.findElements(By.xpath("//tr[@name='entry']")).size();
-				for (int i = 0; i < numberRows; i++) {
-					ContactData contact = new ContactData();
-//					contact.withFirstName  = driver.findElement(By.xpath("//tr[@name='entry']["+(i+1)+"]/td[3]")).getText();
-//					contact.withLastName  =  driver.findElement(By.xpath("//tr[@name='entry']["+(i+1)+"]/td[2]")).getText();
-					contact.withFirstName  (driver.findElement(By.xpath("//tr[@name='entry']["+(i+1)+"]/td[3]")).getText());
-					contact.withLastName ( driver.findElement(By.xpath("//tr[@name='entry']["+(i+1)+"]/td[2]")).getText());
-					contacts.add(contact);
-				}
-				return contacts;
-		 	}
-/*
- * 	public List<ContactData> getContacts() {
-				List<ContactData> contacts = new ArrayList<ContactData>();
-				int numberRows = driver.findElements(By.xpath("//tr[@name='entry']")).size();
-				for (int i = 0; i < numberRows; i++) {
-					ContactData contact = new ContactData();
-					contact.firstName  = driver.findElement(By.xpath("//tr[@name='entry']["+(i+1)+"]/td[3]")).getText();
-					contact.lastName  =  driver.findElement(By.xpath("//tr[@name='entry']["+(i+1)+"]/td[2]")).getText();
-					contacts.add(contact);
-				}
-				return contacts;
-		 	}
-*/
+
 	public int getSumCountContacts() {
 		int sumCountContacts = Integer.parseInt(driver.findElement(By.id("search_count")).getText());
 		return sumCountContacts;	
 	}
+
 
 
 	

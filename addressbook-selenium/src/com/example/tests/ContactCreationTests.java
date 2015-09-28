@@ -6,27 +6,29 @@ import java.util.List;
 import org.testng.annotations.Test;
 import static com.example.fw.ContactHelper.CREATION;
 import com.example.utils.SortedListOf;
+import static org.junit.Assert.assertThat;
+import static org.hamcrest.Matchers.*;
 
 public class ContactCreationTests extends TestBase {
 
 	@Test(dataProvider ="randomValidContactGenerator")
 	public void testNonEmptyContactCreation(ContactData contact) throws Exception {
-		app.navigateTo().mainPage();
+		
 		//save old state
-		List<ContactData> oldList = app.getContactHelper().getContacts();
-
+		SortedListOf<ContactData> oldList = app.getContactHelper().getContacts();
 		// actions 
 		app.getContactHelper().createContact(contact);
 
 		
 		//save new state
-		List<ContactData> newList = app.getContactHelper().getContacts();
-
+		SortedListOf<ContactData> newList = app.getContactHelper().getContacts();
+		
 		//compare states		
-		oldList.add(contact);
-		Collections.sort(oldList); 
+//		oldList.add(contact);
+//		Collections.sort(oldList); 
 		Collections.sort(newList);
-		assertEquals(newList,oldList);
+//		assertEquals(newList,oldList);
+		assertThat(newList,equalTo(oldList.withAdded(contact)));
 	}
 
 	   @Test
