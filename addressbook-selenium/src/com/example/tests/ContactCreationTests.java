@@ -2,16 +2,27 @@ package com.example.tests;
 
 import static org.testng.Assert.assertEquals;
 import java.util.Collections;
+import java.util.Iterator;
 import java.util.List;
+
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import static com.example.fw.ContactHelper.CREATION;
+import static com.example.tests.ContactDataGenerator.generateRandomContacts;
+
 import com.example.utils.SortedListOf;
 import static org.junit.Assert.assertThat;
 import static org.hamcrest.Matchers.*;
 
 public class ContactCreationTests extends TestBase {
 
-	@Test(dataProvider ="randomValidContactGenerator")
+	@DataProvider
+	public Iterator<Object[]> contactsFromFile(){
+		return wrapContactsForDataProvider(LoadContactsFromFile (5)).iterator();
+	}
+	
+//	@Test(dataProvider ="randomValidContactGenerator")
+	@Test(dataProvider ="contactsFromFile")
 	public void testNonEmptyContactCreation(ContactData contact) throws Exception {
 		
 		//save old state
