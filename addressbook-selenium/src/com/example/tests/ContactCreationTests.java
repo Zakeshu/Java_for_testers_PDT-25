@@ -46,5 +46,4 @@ public class ContactCreationTests extends TestBase {
 	      	app.navigateTo().mainPage(); 
 	      	assertEquals(app.getContactHelper().getSumCountContacts(), app.getContactHelper().getContacts().size());
 	      }
-
 }

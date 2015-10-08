@@ -18,6 +18,7 @@ public class GroupDataGenerator {
 			System.out.println("Please specify parametes : <amount of test data> <file> <format>");
 			return;
 		}
+
 		int amount = Integer.parseInt(args[0]); 
 		File file = new File(args[1]);
 		String format = args[2];
@@ -26,13 +27,13 @@ public class GroupDataGenerator {
 			System.out.println("File exists, please remove it manually:" + file);
 			return;
 		}
-		
+
 		List<GroupData> groups = generateRandomGroups (amount);
 		if ("csv".equals(format)){
 			saveGroupsToCsvFile (groups,file);
 		} else if ("xml".equals(format)){
 			saveGroupsToXmlFile (groups,file);
-		} else{
+		} else {
 			System.out.println("Unknown format " + format);	
 		}
 	}
@@ -45,7 +46,7 @@ public class GroupDataGenerator {
 		writer.write(xml);
 		writer.close();
 	}
-	
+
 	public static List<GroupData> loadGroupsFromXmlFile(File file) throws IOException {
 		XStream xstream = new XStream();
 		xstream.alias("group", GroupData.class);
@@ -60,6 +61,7 @@ public class GroupDataGenerator {
 		}
 		writer.close();
 	}
+
 	public static List<GroupData> loadGroupsFromCsvFile(File file) throws IOException {
 		List<GroupData> list = new ArrayList<GroupData>();
 		FileReader reader = new FileReader(file);
@@ -77,7 +79,7 @@ public class GroupDataGenerator {
 		bufferedReader.close();
 		return list;
 	}
-	
+
 	public static List<GroupData> generateRandomGroups(int amount) {
 		List<GroupData> list = new ArrayList<GroupData>();
 		Random rnd = new Random ();
@@ -87,16 +89,16 @@ public class GroupDataGenerator {
 					.withHeader (generateRandomString())
 					.withFooter (generateRandomString());
 			list.add(group);
-			}
-			return list;
 		}
+		return list;
+	}
 
-		public  static String generateRandomString(){
-			Random rnd = new Random ();
-			if(rnd.nextInt(3) == 0 ){
-				return "";
-			} else {
-				return "test" + rnd.nextInt();
-			}
+	public  static String generateRandomString(){
+		Random rnd = new Random ();
+		if(rnd.nextInt(3) == 0 ){
+			return "";
+		} else {
+			return "test" + rnd.nextInt();
 		}
 	}
+}

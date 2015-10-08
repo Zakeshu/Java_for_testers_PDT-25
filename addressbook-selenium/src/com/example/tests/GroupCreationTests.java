@@ -23,9 +23,7 @@ public class GroupCreationTests extends TestBase {
 		return wrapGroupsForDataProvider(loadGroupsFromXmlFile (new File ("groups.xml"))).iterator();
 	}	
 
-
-
-	//	@Test(dataProvider ="randomValidGroupGenerator")
+//		@Test(dataProvider ="randomValidGroupGenerator")
 	@Test(dataProvider ="groupsFromFile")
 	public void testGroupCreationWithValidDate(GroupData group) throws Exception {
 
@@ -40,6 +38,5 @@ public class GroupCreationTests extends TestBase {
 
 		//compare states	
 		assertThat(newList,equalTo(oldList.withAdded(group)));
-
 	}
 }

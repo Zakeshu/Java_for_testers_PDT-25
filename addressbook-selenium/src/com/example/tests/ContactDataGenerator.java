@@ -8,17 +8,16 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
-
 import com.thoughtworks.xstream.XStream;
 
 public class ContactDataGenerator {
-
 
 	public static void main(String[] args) throws IOException {
 		if(args.length < 3){
 			System.out.println("Please specify parametes : <amount of test data> <file> <format>");
 			return;
 		}
+		
 		int amount = Integer.parseInt(args[0]); 
 		File file = new File(args[1]);
 		String format = args[2];
@@ -33,14 +32,10 @@ public class ContactDataGenerator {
 			saveContactsToCsvFile (contacts, file);
 			} else if ("xml".equals(format)){
 			saveContactsToXmlFile (contacts, file);
-		} else{
+		} else {
 			System.out.println("Unknown format " + format);	
 		}
 	}
-
-//	public static List<ContactData> loadGroupsFromCsvFile(File file) {
-//		return null;
-//	}
 
 	public static List<ContactData> loadContactsFromCsvFile(File file) throws IOException {
 		List<ContactData> list = new ArrayList<ContactData>();
