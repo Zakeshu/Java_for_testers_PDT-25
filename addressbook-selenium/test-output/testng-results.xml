@@ -1,131 +1,135 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="10" passed="10">
+<testng-results skipped="0" failed="0" total="11" passed="11">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="14416" started-at="2015-10-08T13:58:04Z" finished-at="2015-10-08T13:58:18Z">
+  <suite name="Default suite" duration-ms="76047" started-at="2015-10-08T23:43:24Z" finished-at="2015-10-08T23:44:40Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="14416" started-at="2015-10-08T13:58:04Z" finished-at="2015-10-08T13:58:18Z">
-      <class name="com.example.tests.GroupCreationTests">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.example.tests.GroupCreationTests@ba4d54]" name="setUp" is-config="true" duration-ms="5909" started-at="2015-10-08T16:58:04Z" finished-at="2015-10-08T16:58:10Z">
+    <test name="Default test" duration-ms="76047" started-at="2015-10-08T23:43:24Z" finished-at="2015-10-08T23:44:40Z">
+      <class name="com.example.tests.ContactCreationTests">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.example.tests.ContactCreationTests@29444d75]" name="setUp" is-config="true" duration-ms="10521" started-at="2015-10-09T02:43:24Z" finished-at="2015-10-09T02:43:34Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="testGroupCreationWithValidDate(com.example.tests.GroupData)[pri:0, instance:com.example.tests.GroupCreationTests@ba4d54]" name="testGroupCreationWithValidDate" duration-ms="1563" started-at="2015-10-08T16:58:10Z" data-provider="groupsFromFile" finished-at="2015-10-08T16:58:11Z">
+        <test-method status="PASS" signature="compareSumCountContacts()[pri:0, instance:com.example.tests.ContactCreationTests@29444d75]" name="compareSumCountContacts" duration-ms="5568" started-at="2015-10-09T02:43:34Z" finished-at="2015-10-09T02:43:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- compareSumCountContacts -->
+        <test-method status="PASS" signature="testNonEmptyContactCreation(com.example.tests.ContactData)[pri:0, instance:com.example.tests.ContactCreationTests@29444d75]" name="testNonEmptyContactCreation" duration-ms="11001" started-at="2015-10-09T02:43:40Z" data-provider="contactsFromFile" finished-at="2015-10-09T02:43:51Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[GroupData [name=test1718222335, header=, footer=]]]>
+                <![CDATA[ContactData [firstName=, lastName=, address=test1392035342, phoneHome=, phoneMobile=test1612744399, phoneWork=test435676281, email_1=, email_2=mail832532789@aol.com, bDay=8, bMonth=null, bYear=1912, groupName=null, address_2=, phoneOther=]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testGroupCreationWithValidDate -->
-        <test-method status="PASS" signature="testGroupCreationWithValidDate(com.example.tests.GroupData)[pri:0, instance:com.example.tests.GroupCreationTests@ba4d54]" name="testGroupCreationWithValidDate" duration-ms="706" started-at="2015-10-08T16:58:11Z" data-provider="groupsFromFile" finished-at="2015-10-08T16:58:12Z">
+        </test-method> <!-- testNonEmptyContactCreation -->
+        <test-method status="PASS" signature="testNonEmptyContactCreation(com.example.tests.ContactData)[pri:0, instance:com.example.tests.ContactCreationTests@29444d75]" name="testNonEmptyContactCreation" duration-ms="5576" started-at="2015-10-09T02:43:51Z" data-provider="contactsFromFile" finished-at="2015-10-09T02:43:57Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[GroupData [name=test-1506870376, header=test-1568135638, footer=test850456506]]]>
+                <![CDATA[ContactData [firstName=, lastName=test-876062398, address=, phoneHome=, phoneMobile=, phoneWork=test705035480, email_1=, email_2=mail-1275288896@aol.com, bDay=6, bMonth=null, bYear=1902, groupName=null, address_2=, phoneOther=]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testGroupCreationWithValidDate -->
-        <test-method status="PASS" signature="testGroupCreationWithValidDate(com.example.tests.GroupData)[pri:0, instance:com.example.tests.GroupCreationTests@ba4d54]" name="testGroupCreationWithValidDate" duration-ms="704" started-at="2015-10-08T16:58:12Z" data-provider="groupsFromFile" finished-at="2015-10-08T16:58:13Z">
+        </test-method> <!-- testNonEmptyContactCreation -->
+        <test-method status="PASS" signature="testNonEmptyContactCreation(com.example.tests.ContactData)[pri:0, instance:com.example.tests.ContactCreationTests@29444d75]" name="testNonEmptyContactCreation" duration-ms="5458" started-at="2015-10-09T02:43:57Z" data-provider="contactsFromFile" finished-at="2015-10-09T02:44:02Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[GroupData [name=test-1025700627, header=test1199738170, footer=test-335461081]]]>
+                <![CDATA[ContactData [firstName=test78222435, lastName=, address=, phoneHome=test-1486659775, phoneMobile=test-1716808549, phoneWork=, email_1=mail-1227705511@aol.com, email_2=, bDay=15, bMonth=null, bYear=1901, groupName=null, address_2=test-1777696545, phoneOther=test-1601781016]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testGroupCreationWithValidDate -->
-        <test-method status="PASS" signature="testGroupCreationWithValidDate(com.example.tests.GroupData)[pri:0, instance:com.example.tests.GroupCreationTests@ba4d54]" name="testGroupCreationWithValidDate" duration-ms="681" started-at="2015-10-08T16:58:13Z" data-provider="groupsFromFile" finished-at="2015-10-08T16:58:13Z">
+        </test-method> <!-- testNonEmptyContactCreation -->
+        <test-method status="PASS" signature="testNonEmptyContactCreation(com.example.tests.ContactData)[pri:0, instance:com.example.tests.ContactCreationTests@29444d75]" name="testNonEmptyContactCreation" duration-ms="5086" started-at="2015-10-09T02:44:02Z" data-provider="contactsFromFile" finished-at="2015-10-09T02:44:07Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[GroupData [name=test629346187, header=test-1328436570, footer=test-1364118565]]]>
+                <![CDATA[ContactData [firstName=test1806125992, lastName=, address=test1960513011, phoneHome=test-8147713, phoneMobile=test862006604, phoneWork=test1800738963, email_1=mail606324626@aol.com, email_2=, bDay=30, bMonth=null, bYear=1901, groupName=null, address_2=test-1119733639, phoneOther=test1230266454]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testGroupCreationWithValidDate -->
-        <test-method status="PASS" signature="testGroupCreationWithValidDate(com.example.tests.GroupData)[pri:0, instance:com.example.tests.GroupCreationTests@ba4d54]" name="testGroupCreationWithValidDate" duration-ms="675" started-at="2015-10-08T16:58:13Z" data-provider="groupsFromFile" finished-at="2015-10-08T16:58:14Z">
+        </test-method> <!-- testNonEmptyContactCreation -->
+        <test-method status="PASS" signature="testNonEmptyContactCreation(com.example.tests.ContactData)[pri:0, instance:com.example.tests.ContactCreationTests@29444d75]" name="testNonEmptyContactCreation" duration-ms="5051" started-at="2015-10-09T02:44:07Z" data-provider="contactsFromFile" finished-at="2015-10-09T02:44:12Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[GroupData [name=, header=test-1583471172, footer=test-1209935252]]]>
+                <![CDATA[ContactData [firstName=, lastName=, address=test1976161841, phoneHome=, phoneMobile=test-1319021744, phoneWork=test1476596950, email_1=, email_2=mail-1712387022@aol.com, bDay=18, bMonth=null, bYear=1908, groupName=null, address_2=, phoneOther=]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testGroupCreationWithValidDate -->
-        <test-method status="PASS" signature="testGroupCreationWithValidDate(com.example.tests.GroupData)[pri:0, instance:com.example.tests.GroupCreationTests@ba4d54]" name="testGroupCreationWithValidDate" duration-ms="689" started-at="2015-10-08T16:58:14Z" data-provider="groupsFromFile" finished-at="2015-10-08T16:58:15Z">
+        </test-method> <!-- testNonEmptyContactCreation -->
+        <test-method status="PASS" signature="testNonEmptyContactCreation(com.example.tests.ContactData)[pri:0, instance:com.example.tests.ContactCreationTests@29444d75]" name="testNonEmptyContactCreation" duration-ms="5388" started-at="2015-10-09T02:44:12Z" data-provider="contactsFromFile" finished-at="2015-10-09T02:44:17Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[GroupData [name=, header=test771554790, footer=test-67694205]]]>
+                <![CDATA[ContactData [firstName=test1531610825, lastName=test352658934, address=test591519004, phoneHome=, phoneMobile=test-224294102, phoneWork=test-153402566, email_1=mail-1346838572@aol.com, email_2=mail-1295249172@aol.com, bDay=17, bMonth=null, bYear=1909, groupName=null, address_2=test-659470773, phoneOther=test1512267456]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testGroupCreationWithValidDate -->
-        <test-method status="PASS" signature="testGroupCreationWithValidDate(com.example.tests.GroupData)[pri:0, instance:com.example.tests.GroupCreationTests@ba4d54]" name="testGroupCreationWithValidDate" duration-ms="684" started-at="2015-10-08T16:58:15Z" data-provider="groupsFromFile" finished-at="2015-10-08T16:58:16Z">
+        </test-method> <!-- testNonEmptyContactCreation -->
+        <test-method status="PASS" signature="testNonEmptyContactCreation(com.example.tests.ContactData)[pri:0, instance:com.example.tests.ContactCreationTests@29444d75]" name="testNonEmptyContactCreation" duration-ms="5077" started-at="2015-10-09T02:44:17Z" data-provider="contactsFromFile" finished-at="2015-10-09T02:44:23Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[GroupData [name=, header=, footer=test-964658677]]]>
+                <![CDATA[ContactData [firstName=, lastName=, address=test384779955, phoneHome=, phoneMobile=, phoneWork=test724021248, email_1=, email_2=, bDay=26, bMonth=null, bYear=1903, groupName=null, address_2=, phoneOther=test709903627]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testGroupCreationWithValidDate -->
-        <test-method status="PASS" signature="testGroupCreationWithValidDate(com.example.tests.GroupData)[pri:0, instance:com.example.tests.GroupCreationTests@ba4d54]" name="testGroupCreationWithValidDate" duration-ms="821" started-at="2015-10-08T16:58:16Z" data-provider="groupsFromFile" finished-at="2015-10-08T16:58:16Z">
+        </test-method> <!-- testNonEmptyContactCreation -->
+        <test-method status="PASS" signature="testNonEmptyContactCreation(com.example.tests.ContactData)[pri:0, instance:com.example.tests.ContactCreationTests@29444d75]" name="testNonEmptyContactCreation" duration-ms="4951" started-at="2015-10-09T02:44:23Z" data-provider="contactsFromFile" finished-at="2015-10-09T02:44:28Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[GroupData [name=, header=, footer=test1524405457]]]>
+                <![CDATA[ContactData [firstName=, lastName=, address=, phoneHome=, phoneMobile=, phoneWork=, email_1=, email_2=mail544115326@aol.com, bDay=21, bMonth=null, bYear=1906, groupName=null, address_2=test-2138318418, phoneOther=]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testGroupCreationWithValidDate -->
-        <test-method status="PASS" signature="testGroupCreationWithValidDate(com.example.tests.GroupData)[pri:0, instance:com.example.tests.GroupCreationTests@ba4d54]" name="testGroupCreationWithValidDate" duration-ms="772" started-at="2015-10-08T16:58:16Z" data-provider="groupsFromFile" finished-at="2015-10-08T16:58:17Z">
+        </test-method> <!-- testNonEmptyContactCreation -->
+        <test-method status="PASS" signature="testNonEmptyContactCreation(com.example.tests.ContactData)[pri:0, instance:com.example.tests.ContactCreationTests@29444d75]" name="testNonEmptyContactCreation" duration-ms="5204" started-at="2015-10-09T02:44:28Z" data-provider="contactsFromFile" finished-at="2015-10-09T02:44:33Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[GroupData [name=test-313179854, header=, footer=test130969315]]]>
+                <![CDATA[ContactData [firstName=test-1695936075, lastName=test344526662, address=test219070672, phoneHome=test-730589049, phoneMobile=test799361304, phoneWork=, email_1=, email_2=, bDay=26, bMonth=null, bYear=1901, groupName=null, address_2=test1009910794, phoneOther=]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testGroupCreationWithValidDate -->
-        <test-method status="PASS" signature="testGroupCreationWithValidDate(com.example.tests.GroupData)[pri:0, instance:com.example.tests.GroupCreationTests@ba4d54]" name="testGroupCreationWithValidDate" duration-ms="703" started-at="2015-10-08T16:58:17Z" data-provider="groupsFromFile" finished-at="2015-10-08T16:58:18Z">
+        </test-method> <!-- testNonEmptyContactCreation -->
+        <test-method status="PASS" signature="testNonEmptyContactCreation(com.example.tests.ContactData)[pri:0, instance:com.example.tests.ContactCreationTests@29444d75]" name="testNonEmptyContactCreation" duration-ms="5991" started-at="2015-10-09T02:44:33Z" data-provider="contactsFromFile" finished-at="2015-10-09T02:44:39Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[GroupData [name=, header=, footer=]]]>
+                <![CDATA[ContactData [firstName=test-1678323752, lastName=test-906785007, address=test-617700541, phoneHome=test-2001152057, phoneMobile=test1603359612, phoneWork=, email_1=mail395982095@aol.com, email_2=mail-849268104@aol.com, bDay=23, bMonth=null, bYear=1908, groupName=null, address_2=test833961708, phoneOther=]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testGroupCreationWithValidDate -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.example.tests.GroupCreationTests@ba4d54]" name="tearDown" is-config="true" duration-ms="362" started-at="2015-10-08T16:58:18Z" finished-at="2015-10-08T16:58:18Z">
+        </test-method> <!-- testNonEmptyContactCreation -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.example.tests.ContactCreationTests@29444d75]" name="tearDown" is-config="true" duration-ms="984" started-at="2015-10-09T02:44:39Z" finished-at="2015-10-09T02:44:40Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.example.tests.GroupCreationTests -->
+      </class> <!-- com.example.tests.ContactCreationTests -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
