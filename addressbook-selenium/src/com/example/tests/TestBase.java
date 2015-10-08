@@ -20,9 +20,10 @@ public class TestBase {
 	protected ApplicationManager app;
 
 	@BeforeTest
-	public void setUp() throws Exception {
+	public void setUp() throws Exception { 
+		String configFile =System.getProperty("configFile","application.properties");
 		Properties properties = new Properties();
-		properties.load(new FileReader(new  File("application.properties")));
+		properties.load(new FileReader(new  File(configFile)));
 		app = new ApplicationManager (properties);
 	}
 

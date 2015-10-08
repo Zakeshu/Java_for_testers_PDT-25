@@ -1,0 +1,2 @@
+java -cp bin;E:\JavaWebserverGithub\Java\xstream-1.4.8\lib\xstream-1.4.8.jar;E:\JavaWebserverGithub\Java\xstream-1.4.8\lib\xstream\xmlpull-1.1.3.1.jar;E:\JavaWebserverGithub\Java\xstream-1.4.8\lib\xstream\xpp3_min-1.1.4c.jar;E:\JavaWebserverGithub\Java\selenium-server-standalone-2.47.1.jar -DconfigFile=firefox.properties org.testng.TestNG testng-customsuite.xml
+pause

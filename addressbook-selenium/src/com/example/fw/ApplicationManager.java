@@ -21,7 +21,7 @@ public class ApplicationManager {
 		if ("firefox".equals(browser)){
 			driver = new FirefoxDriver(); 
 		} else if ("ie".equals(browser)){
-			System.setProperty("webdriver.ie.driver", "E:\\JavaWebserverGithub\\Java\\IEDriverServer.exe");
+//			System.setProperty("webdriver.ie.driver", "E:\\JavaWebserverGithub\\Java\\IEDriverServer.exe");
 			driver = new InternetExplorerDriver();
 		} else {
 			throw new Error ("Unsupported browser" + browser);
