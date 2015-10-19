@@ -12,3 +12,109 @@ user global configuration and to define the default location to store repositori
 not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
 EGit might behave differently since they see different configuration options.
 This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2015-10-12 13:44:41.087 -----------------------------------------------
+eclipse.buildId=4.5.0.I20150603-2000
+java.version=1.8.0_60
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ru_RU
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2015-10-12 13:45:21.416
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\admin'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2015-10-19 19:34:33.262 -----------------------------------------------
+eclipse.buildId=4.5.0.I20150603-2000
+java.version=1.8.0_60
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ru_RU
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2015-10-19 19:35:23.390
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\admin'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.testng.eclipse 1 0 2015-10-19 20:11:07.230
+!MESSAGE [TestNGLaunchShortcut] Examining Java element:TestContactCreation.java [in com.example.tests [in src [in addressbook-native-tests]]]
+  package com.example.tests
+  import org.testng.Assert
+  import org.testng.annotations.Test
+  import com.example.fw.Contact
+  class TestContactCreation
+    void shouldCreateContactWithValidData()
+
+!ENTRY org.testng.eclipse 1 0 2015-10-19 20:11:10.918
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: E:\JAVA\Repo\Java_for_testers_PDT-25\addressbook-native-tests\bin E:\Program\eclipse-java-mars-R-win32-x86_64\eclipse\plugins\org.testng.eclipse_6.9.5.201508210528\lib\testng.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 4962 -d E:\JAVA\Repo\Java_for_testers_PDT-25\addressbook-native-tests\test-output C:\Users\admin\AppData\Local\Temp\testng-eclipse--1107710531\testng-customsuite.xml
+java -ea -classpath E:\JAVA\Repo\Java_for_testers_PDT-25\addressbook-native-tests\bin:E:\Program\eclipse-java-mars-R-win32-x86_64\eclipse\plugins\org.testng.eclipse_6.9.5.201508210528\lib\testng.jar org.testng.remote.RemoteTestNG -serport 4962 -d E:\JAVA\Repo\Java_for_testers_PDT-25\addressbook-native-tests\test-output C:\Users\admin\AppData\Local\Temp\testng-eclipse--1107710531\testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2015-10-19 20:11:18.779
+!MESSAGE Stop the socket server as it's still pending on accepting the client
+
+!ENTRY org.testng.eclipse 1 0 2015-10-19 20:18:12.902
+!MESSAGE [TestNGLaunchShortcut] Examining Java element:TestContactCreation.java [in com.example.tests [in src [in addressbook-native-tests]]]
+  package com.example.tests
+  import org.testng.Assert
+  import org.testng.annotations.Test
+  import com.example.fw.Contact
+  class TestContactCreation
+    void shouldCreateContactWithValidData()
+
+!ENTRY org.testng.eclipse 1 0 2015-10-19 20:18:13.045
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: E:\JAVA\Repo\Java_for_testers_PDT-25\addressbook-native-tests\bin E:\Program\eclipse-java-mars-R-win32-x86_64\eclipse\plugins\org.testng.eclipse_6.9.5.201508210528\lib\testng.jar E:\JAVA\Repo\Java_for_testers_PDT-25\addressbook-native-tests\lib\jacob.jar E:\JAVA\Repo\Java_for_testers_PDT-25\addressbook-native-tests\lib\AutoItX4Java.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 5220 -d E:\JAVA\Repo\Java_for_testers_PDT-25\addressbook-native-tests\test-output C:\Users\admin\AppData\Local\Temp\testng-eclipse--8637809\testng-customsuite.xml
+java -ea -classpath E:\JAVA\Repo\Java_for_testers_PDT-25\addressbook-native-tests\bin:E:\Program\eclipse-java-mars-R-win32-x86_64\eclipse\plugins\org.testng.eclipse_6.9.5.201508210528\lib\testng.jar:E:\JAVA\Repo\Java_for_testers_PDT-25\addressbook-native-tests\lib\jacob.jar:E:\JAVA\Repo\Java_for_testers_PDT-25\addressbook-native-tests\lib\AutoItX4Java.jar org.testng.remote.RemoteTestNG -serport 5220 -d E:\JAVA\Repo\Java_for_testers_PDT-25\addressbook-native-tests\test-output C:\Users\admin\AppData\Local\Temp\testng-eclipse--8637809\testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2015-10-19 20:18:20.244
+!MESSAGE Stop the socket server as it's still pending on accepting the client
+
+!ENTRY org.testng.eclipse 1 0 2015-10-19 20:21:57.655
+!MESSAGE [TestNGLaunchShortcut] Examining Java element:TestContactDeletion.java [in com.example.tests [in src [in addressbook-native-tests]]]
+  package com.example.tests
+  import org.testng.annotations.Test
+  class TestContactDeletion
+    void shouldDeleteContact()
+
+!ENTRY org.testng.eclipse 1 0 2015-10-19 20:21:57.742
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: E:\JAVA\Repo\Java_for_testers_PDT-25\addressbook-native-tests\bin E:\Program\eclipse-java-mars-R-win32-x86_64\eclipse\plugins\org.testng.eclipse_6.9.5.201508210528\lib\testng.jar E:\JAVA\Repo\Java_for_testers_PDT-25\addressbook-native-tests\lib\jacob.jar E:\JAVA\Repo\Java_for_testers_PDT-25\addressbook-native-tests\lib\AutoItX4Java.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 5356 -d E:\JAVA\Repo\Java_for_testers_PDT-25\addressbook-native-tests\test-output C:\Users\admin\AppData\Local\Temp\testng-eclipse-1295967446\testng-customsuite.xml
+java -ea -classpath E:\JAVA\Repo\Java_for_testers_PDT-25\addressbook-native-tests\bin:E:\Program\eclipse-java-mars-R-win32-x86_64\eclipse\plugins\org.testng.eclipse_6.9.5.201508210528\lib\testng.jar:E:\JAVA\Repo\Java_for_testers_PDT-25\addressbook-native-tests\lib\jacob.jar:E:\JAVA\Repo\Java_for_testers_PDT-25\addressbook-native-tests\lib\AutoItX4Java.jar org.testng.remote.RemoteTestNG -serport 5356 -d E:\JAVA\Repo\Java_for_testers_PDT-25\addressbook-native-tests\test-output C:\Users\admin\AppData\Local\Temp\testng-eclipse-1295967446\testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2015-10-19 20:22:17.623
+!MESSAGE Stop the socket server as it's still pending on accepting the client
+
+!ENTRY org.testng.eclipse 1 0 2015-10-19 20:32:10.740
+!MESSAGE [TestNGLaunchShortcut] Examining Java element:TestContactCreation.java [in com.example.tests [in src [in addressbook-native-tests]]]
+  package com.example.tests
+  import org.testng.Assert
+  import org.testng.annotations.Test
+  import com.example.fw.Contact
+  class TestContactCreation
+    void shouldCreateContactWithValidData()
+
+!ENTRY org.testng.eclipse 1 0 2015-10-19 20:32:10.865
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: E:\JAVA\Repo\Java_for_testers_PDT-25\addressbook-native-tests\bin E:\Program\eclipse-java-mars-R-win32-x86_64\eclipse\plugins\org.testng.eclipse_6.9.5.201508210528\lib\testng.jar E:\JAVA\Repo\Java_for_testers_PDT-25\addressbook-native-tests\lib\jacob.jar E:\JAVA\Repo\Java_for_testers_PDT-25\addressbook-native-tests\lib\AutoItX4Java.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 5767 -d E:\JAVA\Repo\Java_for_testers_PDT-25\addressbook-native-tests\test-output C:\Users\admin\AppData\Local\Temp\testng-eclipse-1036674570\testng-customsuite.xml
+java -ea -classpath E:\JAVA\Repo\Java_for_testers_PDT-25\addressbook-native-tests\bin:E:\Program\eclipse-java-mars-R-win32-x86_64\eclipse\plugins\org.testng.eclipse_6.9.5.201508210528\lib\testng.jar:E:\JAVA\Repo\Java_for_testers_PDT-25\addressbook-native-tests\lib\jacob.jar:E:\JAVA\Repo\Java_for_testers_PDT-25\addressbook-native-tests\lib\AutoItX4Java.jar org.testng.remote.RemoteTestNG -serport 5767 -d E:\JAVA\Repo\Java_for_testers_PDT-25\addressbook-native-tests\test-output C:\Users\admin\AppData\Local\Temp\testng-eclipse-1036674570\testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2015-10-19 20:32:14.528
+!MESSAGE Stop the socket server as it's still pending on accepting the client

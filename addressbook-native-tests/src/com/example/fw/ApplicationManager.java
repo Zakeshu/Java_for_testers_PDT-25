@@ -1,59 +1,68 @@
 package com.example.fw;
 
+
+import java.io.IOException;
 import java.util.Properties;
-import java.util.concurrent.TimeUnit;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.ie.InternetExplorerDriver;
 
 public class ApplicationManager {
 
-	public  WebDriver driver;
-	public  String baseUrl;
-	private NavigationHelper navigationHelper;
-	private GroupHelper groupHelper;
+	private static ApplicationManager singleton;
+	private Properties props;
 	private ContactHelper contactHelper;
-	private Properties properties;
+	private ProcessHelper processHelper;
+	private AutoItHelper autoItHelper;
 
-	public ApplicationManager (Properties properties) {
-		this.properties = properties;
-		String browser = properties.getProperty("browser");
-		if ("firefox".equals(browser)){
-			driver = new FirefoxDriver(); 
-		} else if ("ie".equals(browser)){
-//			System.setProperty("webdriver.ie.driver", "E:\\JavaWebserverGithub\\Java\\IEDriverServer.exe");
-			driver = new InternetExplorerDriver();
-		} else {
-			throw new Error ("Unsupported browser" + browser);
+
+	public static ApplicationManager getInstance(Properties props) throws IOException {
+		if (singleton == null) {
+			singleton = new ApplicationManager();
+			singleton.setProperties(props);
+			singleton.start();
 		}
-//		driver = new FirefoxDriver();
-		baseUrl = properties.getProperty ("baseUrl");
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		driver.get(baseUrl);	
+		return singleton;
 	}
 
-	public void stop() {
-		driver.quit();
+	public void start () throws IOException {
+		getProcessHelper().startAppUnderTest();
 	}
 
-	public NavigationHelper navigateTo() {
-		if (navigationHelper == null){
-			navigationHelper = new NavigationHelper(this);
-		}	
-		return navigationHelper;	
+	public void stop () {
+		getProcessHelper().stopAppUnderTest();
 	}
-	
-	public GroupHelper getGroupHelper() {
-		if (groupHelper == null){
-			groupHelper = new GroupHelper(this);
-		}	
-		return groupHelper;	
+
+	public void setProperties(Properties props) {
+		this.props = props;
 	}
-	
+
+	public String getProperty(String key) {
+		return props.getProperty(key);
+	}
+
+	public String getProperty(String key, String defaultValue) {
+		return props.getProperty(key, defaultValue);
+	}
+
+
 	public ContactHelper getContactHelper() {
-		if (contactHelper == null){
+		if (contactHelper == null) {
 			contactHelper = new ContactHelper(this);
-		}	
-		return contactHelper;	
+		}
+		return contactHelper;
 	}
+
+	public ProcessHelper getProcessHelper() {
+		if (processHelper == null) {
+			processHelper = new ProcessHelper(this);
+		}
+		return processHelper;
+	}
+
+	public AutoItHelper getAutoItHelper() {
+		if (autoItHelper == null) {
+			autoItHelper = new AutoItHelper(this);
+		}
+		return autoItHelper;
+	}
+
+
 }
