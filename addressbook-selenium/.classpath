@@ -9,5 +9,8 @@
 	<classpathentry kind="lib" path="E:/JAVA/xstream-1.4.8/lib/xstream/xpp3_min-1.1.4c.jar"/>
 	<classpathentry kind="lib" path="E:/JAVA/xstream-1.4.8/lib/xstream-1.4.8.jar"/>
 	<classpathentry kind="lib" path="E:/JAVA/selenium-server-standalone-2.47.1.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/Hibernate"/>
+	<classpathentry kind="lib" path="E:/JAVA/hibernate-release-5.0.2.Final/lib/optional/infinispan/jboss-transaction-api_1.1_spec-1.0.1.Final.jar"/>
+	<classpathentry kind="lib" path="E:/JAVA/mysql-connector-java-5.1.37/mysql-connector-java-5.1.37-bin.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

@@ -1,16 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Default suite]">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.example.tests.ContactCreationTests">
+      <class name="com.example.tests.GroupCreationTests">
         <methods>
+          <include name="testGroupCreationWithValidDate"/>
           <include name="setUp"/>
-          <include name="compareSumCountContacts"/>
-          <include name="tearDown"/>
-          <include name="testNonEmptyContactCreation" invocation-numbers="0 1 2 3 4 5 6 7 8 9"/>
         </methods>
-      </class> <!-- com.example.tests.ContactCreationTests -->
+      </class> <!-- com.example.tests.GroupCreationTests -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
