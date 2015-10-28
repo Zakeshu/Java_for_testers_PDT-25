@@ -12,11 +12,15 @@ public class ApplicationModel {
 	private SortedListOf<ContactData> contacts;
 	
 	public SortedListOf<GroupData> getGroups (){
-		return groups;
+//		return groups;
+		return new SortedListOf<GroupData>(groups);
 	}
 	
-	public void setGroups(List<GroupData> groups) {
-		this.groups = new SortedListOf<GroupData>(groups);
+//	public void setGroups(List<GroupData> groups) {
+//		this.groups = new SortedListOf<GroupData>(groups);
+//	}
+	public void setGroups(List<GroupData> listGroups) {
+		this.groups = new SortedListOf<GroupData>(listGroups);
 	}
 	
 	public  	SortedListOf<ContactData> getContacts (){

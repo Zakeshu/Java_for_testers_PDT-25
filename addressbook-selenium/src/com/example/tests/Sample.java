@@ -1,10 +1,20 @@
 package com.example.tests;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.Properties;
+import com.example.fw.ApplicationManager;
+
 public class Sample {
 
-	public static void main(String[] args) {
-		String line = ",test-556375859,test673609350,test-624522497,test344254967,mail-154558718@aol.com,mail-1584592140@aol.com,,,2,November,1903,";
-		System.out.println(line.split(",").length);
+	public static void main(String[] args) throws FileNotFoundException, IOException {
+		Properties  properties = new Properties();
+		properties.load(new FileReader (new File("firefox.properties")));
+		ApplicationManager app = new  ApplicationManager (properties);
+		app.getHibernateHelper(); 
+		System.out.println(app.getHibernateHelper().listGroups());
 		
 	}
 

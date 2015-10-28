@@ -1,7 +1,7 @@
 package com.example.tests;
 
 public class ContactData implements Comparable<ContactData>{
-
+	private String id;
 	private String firstName;
 	private String lastName;
 	private String address;
@@ -46,7 +46,7 @@ public class ContactData implements Comparable<ContactData>{
 		result = prime * result + ((lastName == null) ? 0 : lastName.hashCode());
 		return result;
 	}
-	
+
 	@Override
 	public String toString() {
 		return "ContactData [firstName=" + firstName + ", lastName=" + lastName + ", address=" + address
@@ -75,66 +75,71 @@ public class ContactData implements Comparable<ContactData>{
 		return this.lastName.toLowerCase().compareTo(other.lastName.toLowerCase());
 	}
 
+	public ContactData withId(String id) { 
+		this.id = id;
+		return this;
+	}
+
 	public ContactData withFirstName(String firstName) {
 		this.firstName = firstName;
 		return this;
 	}
-	
+
 	public ContactData withLastName (String lastName) {
 		this.lastName = lastName;
 		return this;
 	}
-	
+
 	public ContactData withAddress (String address) {
 		this.address = address;
 		return this;
 	}
-	
+
 	public ContactData withPhoneHome (String phoneHome) {
 		this.phoneHome = phoneHome;
 		return this;
 	}
-	
+
 	public ContactData withPhoneMobile (String phoneMobile) {
 		this.phoneMobile = phoneMobile;
 		return this;
 	}
-	
+
 	public ContactData withPhoneWork (String phoneWork) {
 		this.phoneWork = phoneWork;
 		return this;
 	}
-	
+
 	public ContactData withEmail_1 (String email_1) {
 		this.email_1 = email_1;
 		return this;
 	}
-	
+
 	public ContactData withEmail_2 (String email_2) {
 		this.email_2 = email_2;
 		return this;
 	}
-	
+
 	public ContactData withAddress_2 (String address_2) {
 		this.address_2 = address_2;
 		return this;
 	}
-	
+
 	public ContactData withPhoneOther (String phoneOther) {
 		this.phoneOther = phoneOther;
 		return this;
 	}
-	
+
 	public ContactData withBDay (String bDay) {
 		this.bDay = bDay;
 		return this;
 	}
-	
+
 	public ContactData withBMonth (String bMonth) {
 		this.bMonth = bMonth;
 		return this;
 	}
-	
+
 	public ContactData withBYear (String bYear) {
 		this.bYear = bYear;
 		return this;
@@ -151,42 +156,92 @@ public class ContactData implements Comparable<ContactData>{
 	public String getAddress() {
 		return address;
 	}
-	
+
 	public String getPhoneHome() {
 		return phoneHome;
 	}
-	
+
 	public String getPhoneMobile() {
 		return phoneMobile;
 	}
 	public String getPhoneWork() {
 		return phoneWork;
 	}
-	
+
 	public String getEmail_1() {
 		return email_1;
 	}
-	
+
 	public String getEmail_2() {
 		return email_2;
 	}
 	public String getAddress_2() {
 		return address_2;
 	}
-	
+
 	public String getPhoneOther() {
 		return phoneOther;
 	}
-	
+
 	public String getBDay() {
 		return bDay;
 	}
-	
+
 	public String getBMonth() {
 		return bMonth;
 	}
-	
+
 	public String getBYear() {
 		return bYear;
 	}
+	public String getId() {
+		return id;
+	}
+	public void setId(String id) {
+		this.id = id;
+	}
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+	public void setAddress(String address) {
+		this.address = address;
+	}
+	public void setPhoneHome(String phoneHome) {
+		this.phoneHome = phoneHome;
+	}
+	public void setPhoneMobile(String phoneMobile) {
+		this.phoneMobile = phoneMobile;
+	}
+	public void setPhoneWork(String phoneWork) {
+		this.phoneWork = phoneWork;
+	}
+	public void setEmail_1(String email_1) {
+		this.email_1 = email_1;
+	}
+	public void setEmail_2(String email_2) {
+		this.email_2 = email_2;
+	}
+	public void setbDay(String bDay) {
+		this.bDay = bDay;
+	}
+	public void setbMonth(String bMonth) {
+		this.bMonth = bMonth;
+	}
+	public void setbYear(String bYear) {
+		this.bYear = bYear;
+	}
+	public void setGroupName(String groupName) {
+		this.groupName = groupName;
+	}
+	public void setAddress_2(String address_2) {
+		this.address_2 = address_2;
+	}
+	public void setPhoneOther(String phoneOther) {
+		this.phoneOther = phoneOther;
+	}
+
+
 }

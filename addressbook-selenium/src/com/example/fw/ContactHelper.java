@@ -3,8 +3,9 @@ package com.example.fw;
 
 import org.openqa.selenium.By;
 import com.example.tests.ContactData;
+import com.example.tests.GroupData;
 import com.example.utils.SortedListOf;
-public class ContactHelper extends HelperBase {
+public class ContactHelper extends WebDriverHelperBase {
 
 	public static boolean CREATION = true;
 	public static boolean MODIFICATION = false;
@@ -33,7 +34,19 @@ public class ContactHelper extends HelperBase {
 			cachedContacts.add(contact);
 		}
 	}
-
+	
+	public SortedListOf <ContactData> getUiContacts() {
+		SortedListOf <ContactData> contacts = new SortedListOf<ContactData>();
+		int numberRows = driver.findElements(By.xpath("//tr[@name='entry']")).size();
+		for (int i = 0; i < numberRows; i++) {
+			ContactData contact = new ContactData();
+			contact.withFirstName(driver.findElement(By.xpath("//tr[@name='entry']["+(i+1)+"]/td[3]")).getText());
+			contact.withLastName(driver.findElement(By.xpath("//tr[@name='entry']["+(i+1)+"]/td[2]")).getText());
+			contacts.add(contact);
+		}
+		return contacts;
+	}	
+	
 	public ContactHelper createContact(ContactData contact) {
 		manager.navigateTo().mainPage();
 		openContactPage();

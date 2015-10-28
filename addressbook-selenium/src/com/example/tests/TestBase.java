@@ -28,7 +28,7 @@ public class TestBase {
 		properties.load(new FileReader(new  File(configFile)));
 		app = new ApplicationManager (properties);
 		checkCounter = 0;
-		checkFrequency = Integer.parseInt(properties.getProperty("properties", "0"));
+		checkFrequency = Integer.parseInt(properties.getProperty("check.frequency", "0"));
 	}
 
 	protected boolean wantToCheck(){
