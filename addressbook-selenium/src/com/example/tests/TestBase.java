@@ -17,6 +17,7 @@ import static com.example.tests.GroupDataGenerator.generateRandomGroups;
 import static com.example.tests.ContactDataGenerator.generateRandomContacts;
 
 public class TestBase {
+	
 	protected ApplicationManager app;
 	private int checkFrequency;
 	private int checkCounter;

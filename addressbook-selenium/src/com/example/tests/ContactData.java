@@ -1,6 +1,7 @@
 package com.example.tests;
 
-public class ContactData implements Comparable<ContactData>{
+public class ContactData implements Comparable<ContactData> {
+	
 	private String id;
 	private String firstName;
 	private String lastName;
@@ -53,6 +54,9 @@ public class ContactData implements Comparable<ContactData>{
 				+ ", phoneHome=" + phoneHome + ", phoneMobile=" + phoneMobile + ", phoneWork=" + phoneWork
 				+ ", email_1=" + email_1 + ", email_2=" + email_2 + ", bDay=" + bDay + ", bMonth=" + bMonth + ", bYear="
 				+ bYear + ", groupName=" + groupName + ", address_2=" + address_2 + ", phoneOther=" + phoneOther + "]";
+	}
+	public String getbDay() {
+		return bDay;
 	}
 	@Override
 	public boolean equals(Object obj) {
@@ -242,6 +246,13 @@ public class ContactData implements Comparable<ContactData>{
 	public void setPhoneOther(String phoneOther) {
 		this.phoneOther = phoneOther;
 	}
-
-
+	public String getbMonth() {
+		return bMonth;
+	}
+	public String getbYear() {
+		return bYear;
+	}
+	public String getGroupName() {
+		return groupName;
+	}
 }

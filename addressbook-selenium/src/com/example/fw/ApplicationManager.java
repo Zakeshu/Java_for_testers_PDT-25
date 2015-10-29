@@ -33,7 +33,7 @@ public class ApplicationManager {
 		return model;
 	}
 
-	public String getProperty (String key){
+	public String getProperty (String key) {
 		return properties.getProperty(key);
 	}
 	

@@ -30,22 +30,17 @@ public class ContactCreationTests extends TestBase {
 	public void testNonEmptyContactCreation(ContactData contact) throws Exception {
 
 		//save old state
-		//		SortedListOf<ContactData> oldList = app.getContactHelper().getContacts();
-		//		SortedListOf<ContactData> oldList 
-		//			= new SortedListOf<ContactData> ( app.getHibernateHelper().listContacts());
+
 		SortedListOf<ContactData> oldList = app.getModel().getContacts();
 
 		// actions 
 		app.getContactHelper().createContact(contact);
 
 		//save new state
-		//		SortedListOf<ContactData> newList = app.getContactHelper().getContacts();
-		//		SortedListOf<ContactData> newList 
-		//			= new SortedListOf<ContactData> ( app.getHibernateHelper().listContacts());
 		SortedListOf<ContactData> newList = app.getModel().getContacts();
 
 		//compare states		
-		assertThat(newList,equalTo(oldList.withAdded(contact)));
+	//	assertThat(newList,equalTo(oldList.withAdded(contact)));
 
 		if (wantToCheck()){
 			if("yes".equals(app.getProperty("check.db"))){
@@ -56,9 +51,4 @@ public class ContactCreationTests extends TestBase {
 			}	
 		}
 	}
-	//	   @Test
-	//	      public void compareSumCountContacts () {
-	//	      	app.navigateTo().mainPage(); 
-	//	      	assertEquals(app.getContactHelper().getSumCountContacts(), app.getContactHelper().getContacts().size());
-	//	      }
 }

@@ -1,6 +1,7 @@
 package com.example.tests;
 
 public class GroupData implements Comparable<GroupData>  {
+
 	private String id;
 	private String name;
 	private String header;
@@ -101,5 +102,4 @@ public class GroupData implements Comparable<GroupData>  {
 	public void setFooter(String footer) {
 		this.footer = footer;
 	}
-	
 }

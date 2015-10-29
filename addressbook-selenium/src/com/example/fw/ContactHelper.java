@@ -18,34 +18,34 @@ public class ContactHelper extends WebDriverHelperBase {
 	
 	public SortedListOf<ContactData> getContacts() {
 		if(cachedContacts == null){
-			rebuildCache();
+//			rebuildCache();
 		}
 		return cachedContacts;
 		
 	}
 
-	private void rebuildCache() {
-		cachedContacts = new SortedListOf<ContactData>();
-		int numberRows = driver.findElements(By.xpath("//tr[@name='entry']")).size();
-		for (int i = 0; i < numberRows; i++) {
-			ContactData contact = new ContactData();
-			contact.withFirstName(driver.findElement(By.xpath("//tr[@name='entry']["+(i+1)+"]/td[3]")).getText());
-			contact.withLastName(driver.findElement(By.xpath("//tr[@name='entry']["+(i+1)+"]/td[2]")).getText());
-			cachedContacts.add(contact);
-		}
-	}
-	
+//	private void rebuildCache() {
+//		cachedContacts = new SortedListOf<ContactData>();
+//		int numberRows = driver.findElements(By.xpath("//tr[@name='entry']")).size();
+//		for (int i = 0; i < numberRows; i++) {
+//			ContactData contact = new ContactData();
+//			contact.withFirstName(driver.findElement(By.xpath("//tr[@name='entry']["+(i+1)+"]/td[3]")).getText());
+//			contact.withLastName(driver.findElement(By.xpath("//tr[@name='entry']["+(i+1)+"]/td[2]")).getText());
+//			cachedContacts.add(contact);
+//		}
+//	}
+
 	public SortedListOf <ContactData> getUiContacts() {
-		SortedListOf <ContactData> contacts = new SortedListOf<ContactData>();
-		int numberRows = driver.findElements(By.xpath("//tr[@name='entry']")).size();
-		for (int i = 0; i < numberRows; i++) {
-			ContactData contact = new ContactData();
-			contact.withFirstName(driver.findElement(By.xpath("//tr[@name='entry']["+(i+1)+"]/td[3]")).getText());
-			contact.withLastName(driver.findElement(By.xpath("//tr[@name='entry']["+(i+1)+"]/td[2]")).getText());
-			contacts.add(contact);
-		}
-		return contacts;
-	}	
+	SortedListOf <ContactData> contacts = new SortedListOf<ContactData>();
+	int numberRows = driver.findElements(By.xpath("//tr[@name='entry']")).size();
+	for (int i = 0; i < numberRows; i++) {
+		ContactData contact = new ContactData();
+		contact.withFirstName(driver.findElement(By.xpath("//tr[@name='entry']["+(i+1)+"]/td[3]")).getText());
+		contact.withLastName(driver.findElement(By.xpath("//tr[@name='entry']["+(i+1)+"]/td[2]")).getText());
+		contacts.add(contact);
+	}
+	return contacts;
+}	
 	
 	public ContactHelper createContact(ContactData contact) {
 		manager.navigateTo().mainPage();
@@ -53,7 +53,8 @@ public class ContactHelper extends WebDriverHelperBase {
 		fillContactForm(contact,CREATION);
 		submitContactCreation();
 		returnToHomePage();
-		rebuildCache();
+		manager.getModel().addContact(contact);
+//		rebuildCache();
 		return this;
 	}
 
@@ -61,7 +62,7 @@ public class ContactHelper extends WebDriverHelperBase {
 		gotoContactUpdatePage(index);
 		submitContactRemove();
 		returnToHomePage();
-		rebuildCache();
+//		rebuildCache();
 		return this;
 	}
 	public ContactHelper modifyContact(int index, ContactData contact) {
@@ -70,7 +71,7 @@ public class ContactHelper extends WebDriverHelperBase {
 	        fillContactForm(contact, true);
 	        initContactModification();
 	        returnToHomePage();
-	       rebuildCache();
+//	       rebuildCache();
 	        return this;
 		
 	}
@@ -94,7 +95,7 @@ public class ContactHelper extends WebDriverHelperBase {
 		type(By.name("byear"), contact.getBYear());
 		//selectByText(By.name("new_group"), contact.groupName);
 		if (formType ==CREATION){
-			//selectByText(By.name("new_group"), "group_1");
+		//selectByText(By.name("new_group"), "group_1");
 		}else {
 			if(driver.findElements(By.name("new_group")).size()!=0){
 				throw new Error ("Group selector exists in contact modification form");

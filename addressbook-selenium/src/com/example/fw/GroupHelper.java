@@ -11,6 +11,7 @@ public class GroupHelper extends WebDriverHelperBase {
 	public GroupHelper(ApplicationManager manager) {
 		super(manager);
 	}
+	
 	//	private SortedListOf<GroupData> cachedGroups;
 	//	
 	//	public SortedListOf<GroupData> getGroups() {
@@ -31,6 +32,7 @@ public class GroupHelper extends WebDriverHelperBase {
 	//		}
 	//	}
 	//--------------
+	
 	public SortedListOf <GroupData> getUiGroups() {
 		SortedListOf <GroupData> groups = new SortedListOf <GroupData>();
 		manager.navigateTo().groupsPage();

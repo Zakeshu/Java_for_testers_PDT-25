@@ -11,19 +11,16 @@ public class ApplicationModel {
 	private  SortedListOf<GroupData> groups;
 	private SortedListOf<ContactData> contacts;
 	
-	public SortedListOf<GroupData> getGroups (){
-//		return groups;
+	public SortedListOf<GroupData> getGroups () {
 		return new SortedListOf<GroupData>(groups);
 	}
 	
-//	public void setGroups(List<GroupData> groups) {
-//		this.groups = new SortedListOf<GroupData>(groups);
-//	}
+
 	public void setGroups(List<GroupData> listGroups) {
 		this.groups = new SortedListOf<GroupData>(listGroups);
 	}
 	
-	public  	SortedListOf<ContactData> getContacts (){
+	public  	SortedListOf<ContactData> getContacts () {
 		return contacts;
 	}
 	
@@ -38,6 +35,10 @@ public class ApplicationModel {
 
 	public ApplicationModel removeGroup(int index) {
 		groups.remove(index);
+		return this;
+	}
+	public ApplicationModel addContact(ContactData contact) {
+		contacts.add(contact);
 		return this;
 	}
 }
