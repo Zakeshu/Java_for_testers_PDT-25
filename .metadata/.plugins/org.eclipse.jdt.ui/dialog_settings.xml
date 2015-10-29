@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
-	<item value="E:\JAVA\mysql-connector-java-5.1.37\src\lib" key="org.eclipse.jdt.ui.lastextjar"/>
+	<item value="E:\JAVA\mysql-connector-java-5.1.37" key="org.eclipse.jdt.ui.lastextjar"/>
 	<item value="E:\JAVA\Repo\Promo" key="org.eclipse.jdt.ui.last.external.project"/>
 	<section name="org.eclipse.ltk.ui.refactoring.settings">
 		<item value="false" key="updateQualifiedNames"/>
