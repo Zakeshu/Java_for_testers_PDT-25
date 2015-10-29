@@ -1,0 +1,213 @@
+package com.example.tests;
+
+import java.util.regex.Pattern;
+import java.util.concurrent.TimeUnit;
+import org.junit.*;
+import static org.junit.Assert.*;
+import static org.hamcrest.CoreMatchers.*;
+import org.openqa.selenium.*;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.Select;
+
+public class PagesScreen19201080Cicle {
+  private WebDriver driver;
+  private String baseUrl;
+  private boolean acceptNextAlert = true;
+  private StringBuffer verificationErrors = new StringBuffer();
+
+  @Before
+  public void setUp() throws Exception {
+    driver = new FirefoxDriver();
+    baseUrl = "https://redmine.com/";
+    driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+  }
+
+  @Test
+  public void testPagesScreen19201080Cicle() throws Exception {
+    String i = "1";
+    String count = "99";
+    String x = "1";
+    // ERROR: Caught exception [unknown command [while]]
+    // ERROR: Caught exception [unknown command [readCSV]]
+    // ERROR: Caught exception [unknown command [storeCellValue]]
+    String site_echo = "${site_url}";
+    // # (new Date().getDate()  + (new Date().getMonth()+1)  + new Date().getFullYear());
+    // ERROR: Caught exception [ERROR: Unsupported command [getEval | var d= new Date(); var m=((d.getMonth()+1)<10)?'0'+(d.getMonth()+1):(d.getMonth()+1); d.getDate()+""+ m + "" +d.getFullYear(); | ]]
+    // ERROR: Caught exception [ERROR: Unsupported command [deleteCookie |  | ]]
+    String site_echo = "${site_url}";
+    driver.get("http://${site_url}/aff.php?utm_source=int");
+    String url = "http://www.${site_url}";
+    // ERROR: Caught exception [ERROR: Unsupported command [runScript | document.cookie = "ip_address=46.17.57.142; path=/; domain=.${site_url}; expires=2020-01-01 00:00:00:0" | ]]
+    new Select(driver.findElement(By.id("UserForm_day"))).selectByVisibleText("06");
+    // # xpath=//select[@id='UserForm_month']/option[@value='05']
+    new Select(driver.findElement(By.id("UserForm_month"))).selectByValue("05");
+    new Select(driver.findElement(By.id("UserForm_year"))).selectByVisibleText("1970");
+    // ERROR: Caught exception [ERROR: Unsupported command [getEval | {new Date().getTime()} | ]]
+    String random_mail = "raekandery+" + date_for_mail + "@gmail.com";
+    driver.findElement(By.id("UserForm_email")).clear();
+    driver.findElement(By.id("UserForm_email")).sendKeys(random_mail);
+    String mail = random_mail;
+    driver.findElement(By.id("UserForm_password")).clear();
+    driver.findElement(By.id("UserForm_password")).sendKeys("testtest");
+    // ERROR: Caught exception [Error: locator strategy either id or name must be specified explicitly.]
+    driver.findElement(By.id("submit_button")).click();
+    for (int second = 0;; second++) {
+    	if (second >= 60) fail("timeout");
+    	try { if (driver.findElement(By.xpath("(//div[@id='welcome-popup-loading'])[1]")).isDisplayed()) break; } catch (Exception e) {}
+    	Thread.sleep(1000);
+    }
+
+    // # Получение автологина
+    driver.get("https://my.com/user/find");
+    for (int second = 0;; second++) {
+    	if (second >= 60) fail("timeout");
+    	try { if (driver.findElement(By.xpath("html/body/div[1]/div/div/form/button")).isDisplayed()) break; } catch (Exception e) {}
+    	Thread.sleep(1000);
+    }
+
+    driver.findElement(By.id("AdminLoginForm_password")).clear();
+    driver.findElement(By.id("AdminLoginForm_password")).sendKeys("password");
+    driver.findElement(By.id("AdminLoginForm_login")).clear();
+    driver.findElement(By.id("AdminLoginForm_login")).sendKeys("login");
+    driver.findElement(By.name("yt0")).click();
+    driver.findElement(By.id("FindUserForm_user")).clear();
+    driver.findElement(By.id("FindUserForm_user")).sendKeys(random_mail);
+    driver.findElement(By.name("yt0")).click();
+    driver.findElement(By.name("yt0")).click();
+    String user_id = driver.findElement(By.xpath("html/body/div[1]/div/div/div/div[2]/div[10]/table/tbody/tr[1]/td")).getText();
+    String output = driver.findElement(By.xpath("html/body/div[1]/div/div/div/div[2]/div[10]/table/tbody/tr[7]/td")).getText();
+    driver.findElement(By.linkText(" ")).click();
+    driver.get("http://www.${site_url}/site/autologin/key/" + output);
+    for (int second = 0;; second++) {
+    	if (second >= 60) fail("timeout");
+    	try { if (driver.findElement(By.xpath("html/body/div[4]/div/div[1]/div/div/div[1]")).isDisplayed()) break; } catch (Exception e) {}
+    	Thread.sleep(1000);
+    }
+
+    // # Funnel page 1
+    // ERROR: Caught exception [ERROR: Unsupported command [captureEntirePageScreenshot | C:\Users\admin\Desktop\screen\${site_url}-funnel-${DDMMYY}-1920-1080.jpg | ]]
+    // #Funnel page 2
+    driver.findElement(By.id("funnelScreenname")).clear();
+    driver.findElement(By.id("funnelScreenname")).sendKeys("Robert");
+    driver.findElement(By.id("funnelSaveBtn")).click();
+    for (int second = 0;; second++) {
+    	if (second >= 60) fail("timeout");
+    	try { if (driver.findElement(By.xpath("html/body/div[4]/div/div[1]/div/div/div[1]/div[2]/div[5]/div[4]/div[1]/div/div/div[1]/img")).isDisplayed()) break; } catch (Exception e) {}
+    	Thread.sleep(1000);
+    }
+
+    // ERROR: Caught exception [ERROR: Unsupported command [captureEntirePageScreenshot | C:\Users\admin\Desktop\screen\${site_url}-funnel_photoUploadMotivation-${DDMMYY}-1920-1080.jpg | ]]
+    // #Search page
+    driver.get(baseUrl + url + "/search");
+    // ERROR: Caught exception [ERROR: Unsupported command [captureEntirePageScreenshot | C:\Users\admin\Desktop\screen\${site_url}-search-${DDMMYY}-1920-1080.jpg | ]]
+    // #Other user profile
+    driver.findElement(By.xpath("(//div[@class='image-holder']/a[contains(@class,'overlay')])[1]")).click();
+    // ERROR: Caught exception [ERROR: Unsupported command [captureEntirePageScreenshot | C:\Users\admin\Desktop\screen\${site_url}-user_view-${DDMMYY}-1920-1080.jpg | ]]
+    // #rightMenu
+    driver.findElement(By.id("userNavPhoto")).click();
+    // ERROR: Caught exception [ERROR: Unsupported command [captureEntirePageScreenshot | C:\Users\admin\Desktop\screen\${site_url}-rightMenu-${DDMMYY}-1920-1080.jpg | ]]
+    driver.get(baseUrl + url + "/search");
+    // #leftMenu
+    driver.findElement(By.xpath("//div[@id='site-nav']/ul/li/div")).click();
+    // ERROR: Caught exception [ERROR: Unsupported command [captureEntirePageScreenshot | C:\Users\admin\Desktop\screen\${site_url}-leftMenu-${DDMMYY}-1920-1080.jpg | ]]
+    // #Profile page
+    driver.get(baseUrl + url + "/profile");
+    // ERROR: Caught exception [ERROR: Unsupported command [captureEntirePageScreenshot | C:\Users\admin\Desktop\screen\${site_url}-profile-${DDMMYY}-1920-1080.jpg | ]]
+    // #Profile page 2
+    driver.findElement(By.xpath("//div[@class='b-btn-activity-grid']//.[contains(@class,'btn-activity btn-myphotos')]")).click();
+    // ERROR: Caught exception [ERROR: Unsupported command [captureEntirePageScreenshot | C:\Users\admin\Desktop\screen\${site_url}-profile_2-${DDMMYY}-1920-1080.jpg | ]]
+    // #Account page
+    driver.get(baseUrl + url + "/account");
+    // ERROR: Caught exception [ERROR: Unsupported command [captureEntirePageScreenshot | C:\Users\admin\Desktop\screen\${site_url}-account-${DDMMYY}-1920-1080.jpg | ]]
+    // # Forum page
+    driver.get(baseUrl + url + "/forum");
+    // ERROR: Caught exception [ERROR: Unsupported command [captureEntirePageScreenshot | C:\Users\admin\Desktop\screen\${site_url}-forum-${DDMMYY}-1920-1080.jpg | ]]
+    // # Forum topic
+    driver.get(baseUrl + url + "/forum/topic/id/133634");
+    // ERROR: Caught exception [ERROR: Unsupported command [captureEntirePageScreenshot | C:\Users\admin\Desktop\screen\${site_url}-forum_topic-${DDMMYY}-1920-1080.jpg | ]]
+    // # Chat rooms page
+    driver.get(baseUrl + url + "/rooms");
+    driver.findElement(By.xpath("(//div[@class='b-item']//.[contains(@class,'title')])[1]")).click();
+    // ERROR: Caught exception [ERROR: Unsupported command [captureEntirePageScreenshot | C:\Users\admin\Desktop\screen\${site_url}-chatrooms-${DDMMYY}-1920-1080.jpg | ]]
+    // # Likes page
+    driver.get(baseUrl + url + "/userLikes");
+    // ERROR: Caught exception [ERROR: Unsupported command [captureEntirePageScreenshot | C:\Users\admin\Desktop\screen\${site_url}-userLikes-${DDMMYY}-1920-1080.jpg | ]]
+    // # Activity list
+    driver.get(baseUrl + url + "/search");
+    driver.findElement(By.xpath("(//div[@class='b-btn-activity']//.[contains(@class,'btn-activity btn-wink')])[4]")).click();
+    driver.findElement(By.xpath("(//div[@class='b-btn-activity']//.[contains(@class,'btn-activity btn-wink')])[6]")).click();
+    driver.findElement(By.xpath("(//div[@class='b-btn-activity']//.[contains(@class,'btn-activity btn-wink')])[8]")).click();
+    driver.findElement(By.xpath("(//div[@class='b-btn-activity']//.[contains(@class,'btn-activity btn-wink')])[9]")).click();
+    driver.findElement(By.xpath("(//div[@class='b-btn-activity']//.[contains(@class,'btn-activity btn-wink')])[10]")).click();
+    driver.findElement(By.xpath("(//div[@class='b-btn-activity']//.[contains(@class,'btn-activity btn-wink')])[11]")).click();
+    driver.findElement(By.xpath("(//div[@class='b-btn-activity']//.[contains(@class,'btn-activity btn-wink')])[14]")).click();
+    driver.findElement(By.xpath("(//div[@class='b-btn-activity']//.[contains(@class,'btn-activity btn-wink')])[16]")).click();
+    driver.findElement(By.xpath("(//div[@class='b-btn-activity']//.[contains(@class,'btn-activity btn-wink')])[18]")).click();
+    driver.findElement(By.xpath("(//div[@class='b-btn-activity']//.[contains(@class,'btn-activity btn-wink')])[19]")).click();
+    driver.findElement(By.xpath("(//div[@class='b-btn-activity']//.[contains(@class,'btn-activity btn-wink')])[20]")).click();
+    driver.findElement(By.xpath("(//div[@class='b-btn-activity']//.[contains(@class,'btn-activity btn-wink')])[21]")).click();
+    driver.findElement(By.xpath("(//div[@class='b-btn-activity']//.[contains(@class,'btn-activity btn-wink')])[23]")).click();
+    driver.findElement(By.xpath("(//div[@class='b-btn-activity']//.[contains(@class,'btn-activity btn-wink')])[24]")).click();
+    // # Small messanger
+    driver.findElement(By.xpath("(//div[@class='b-btn-activity']//.[contains(@class,'btn-activity btn-chat')])[3]")).click();
+    driver.findElement(By.xpath("(//div[@class='b-btn-activity']//.[contains(@class,'btn-activity btn-chat')])[5]")).click();
+    // ERROR: Caught exception [ERROR: Unsupported command [captureEntirePageScreenshot | C:\Users\admin\Desktop\screen\${site_url}-smallMessanger-${DDMMYY}-1920-1080.jpg | ]]
+    // # Big messanger
+    driver.findElement(By.xpath("//div[@class='b-chat-show']//span[contains(@class,'b-chatrooms-icon')]")).click();
+    // ERROR: Caught exception [ERROR: Unsupported command [captureEntirePageScreenshot | C:\Users\admin\Desktop\screen\${site_url}-bigMessanger-${DDMMYY}-1920-1080.jpg | ]]
+    driver.findElement(By.xpath("(//div[@class='content-msg']//a[contains(@class,'list-item-wrap')])[3]")).click();
+    // ERROR: Caught exception [ERROR: Unsupported command [captureEntirePageScreenshot | C:\Users\admin\Desktop\screen\${site_url}-bigMessanger_2-${DDMMYY}-1920-1080.jpg | ]]
+    driver.findElement(By.xpath("//div[@class='header']//a[contains(@class,'b-close')]")).click();
+    // ERROR: Caught exception [ERROR: Unsupported command [captureEntirePageScreenshot | C:\Users\admin\Desktop\screen\${site_url}-activity_list-${DDMMYY}-1920-1080.jpg | ]]
+    // # Mark user for test
+    driver.get("https://my.com/user/find");
+    System.out.println("${site_url} " + user_id);
+    // ERROR: Caught exception [ERROR: Unsupported command [deleteCookie |  | ]]
+    // ERROR: Caught exception [ERROR: Unsupported command [deleteAllVisibleCookies |  | ]]
+    // ERROR: Caught exception [ERROR: Unsupported command [getEval | ${i}+1 | ]]
+    // ERROR: Caught exception [unknown command [endWhile]]
+    // ERROR: Caught exception [ERROR: Unsupported command [getEval | alert("Бухать!!!"); | ]]
+  }
+
+  @After
+  public void tearDown() throws Exception {
+    driver.quit();
+    String verificationErrorString = verificationErrors.toString();
+    if (!"".equals(verificationErrorString)) {
+      fail(verificationErrorString);
+    }
+  }
+
+  private boolean isElementPresent(By by) {
+    try {
+      driver.findElement(by);
+      return true;
+    } catch (NoSuchElementException e) {
+      return false;
+    }
+  }
+
+  private boolean isAlertPresent() {
+    try {
+      driver.switchTo().alert();
+      return true;
+    } catch (NoAlertPresentException e) {
+      return false;
+    }
+  }
+
+  private String closeAlertAndGetItsText() {
+    try {
+      Alert alert = driver.switchTo().alert();
+      String alertText = alert.getText();
+      if (acceptNextAlert) {
+        alert.accept();
+      } else {
+        alert.dismiss();
+      }
+      return alertText;
+    } finally {
+      acceptNextAlert = true;
+    }
+  }
+}

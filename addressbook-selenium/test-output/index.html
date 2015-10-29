@@ -23,7 +23,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -37,7 +37,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-Default_suite">
-              <span class="suite-name border-skipped">Default suite</span>
+              <span class="suite-name border-failed">Default suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -48,7 +48,7 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-Default_suite">
-                    <span>C:\Users\admin\AppData\Local\Temp\testng-eclipse--1197450729\testng-customsuite.xml</span>
+                    <span>C:\Users\admin\AppData\Local\Temp\testng-eclipse--757667027\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -90,66 +90,80 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">10 methods,  10 skipped,  </span>
+                    <span class="method-stats">11 methods, 1 failed,   10 passed</span>
                   </li>
                   <li>
-                    <span class="method-list-title skipped">Skipped methods</span>
-                    <span class="show-or-hide-methods skipped">
-                      <a href="#" panel-name="suite-Default_suite" class="hide-methods skipped suite-Default_suite"> (hide)</a> <!-- hide-methods skipped suite-Default_suite -->
-                      <a href="#" panel-name="suite-Default_suite" class="show-methods skipped suite-Default_suite"> (show)</a> <!-- show-methods skipped suite-Default_suite -->
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Default_suite" class="hide-methods failed suite-Default_suite"> (hide)</a> <!-- hide-methods failed suite-Default_suite -->
+                      <a href="#" panel-name="suite-Default_suite" class="show-methods failed suite-Default_suite"> (show)</a> <!-- show-methods failed suite-Default_suite -->
                     </span>
-                    <div class="method-list-content skipped suite-Default_suite">
+                    <div class="method-list-content failed suite-Default_suite">
                       <span>
-                        <img width="3%" src="skipped.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.example.tests.GroupCreationTests" hash-for-method="testGroupCreationWithValidDate(GroupData [name=test-187779000, header=test-1725940652, footer=test-1897768215])">testGroupCreationWithValidDate(GroupData [name=test-187779000, header=test-1725940652, footer=test-1897768215])</a> <!-- method navigator-link -->
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.example.tests.ContactCreationTests" hash-for-method="compareSumCountContacts">compareSumCountContacts</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Default_suite -->
+                  </li>
+                  <li>
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-Default_suite" class="hide-methods passed suite-Default_suite"> (hide)</a> <!-- hide-methods passed suite-Default_suite -->
+                      <a href="#" panel-name="suite-Default_suite" class="show-methods passed suite-Default_suite"> (show)</a> <!-- show-methods passed suite-Default_suite -->
+                    </span>
+                    <div class="method-list-content passed suite-Default_suite">
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.example.tests.ContactCreationTests" hash-for-method="testNonEmptyContactCreation(ContactData [firstName=test-1695936075, lastName=test344526662, address=test219070672, phoneHome=tes...)">testNonEmptyContactCreation(ContactData [firstName=test-1695936075, lastName=test344526662, address=test219070672, phoneHome=tes...)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
-                        <img width="3%" src="skipped.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.example.tests.GroupCreationTests" hash-for-method="testGroupCreationWithValidDate(GroupData [name=, header=test269204306, footer=])">testGroupCreationWithValidDate(GroupData [name=, header=test269204306, footer=])</a> <!-- method navigator-link -->
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.example.tests.ContactCreationTests" hash-for-method="testNonEmptyContactCreation(ContactData [firstName=, lastName=, address=test1976161841, phoneHome=, phoneMobile=test-1319021744,...)">testNonEmptyContactCreation(ContactData [firstName=, lastName=, address=test1976161841, phoneHome=, phoneMobile=test-1319021744,...)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
-                        <img width="3%" src="skipped.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.example.tests.GroupCreationTests" hash-for-method="testGroupCreationWithValidDate(GroupData [name=test1071839584, header=test-1321854102, footer=test-868575203])">testGroupCreationWithValidDate(GroupData [name=test1071839584, header=test-1321854102, footer=test-868575203])</a> <!-- method navigator-link -->
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.example.tests.ContactCreationTests" hash-for-method="testNonEmptyContactCreation(ContactData [firstName=, lastName=test-876062398, address=, phoneHome=, phoneMobile=, phoneWork=test...)">testNonEmptyContactCreation(ContactData [firstName=, lastName=test-876062398, address=, phoneHome=, phoneMobile=, phoneWork=test...)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
-                        <img width="3%" src="skipped.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.example.tests.GroupCreationTests" hash-for-method="testGroupCreationWithValidDate(GroupData [name=, header=test817358869, footer=])">testGroupCreationWithValidDate(GroupData [name=, header=test817358869, footer=])</a> <!-- method navigator-link -->
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.example.tests.ContactCreationTests" hash-for-method="testNonEmptyContactCreation(ContactData [firstName=test1806125992, lastName=, address=test1960513011, phoneHome=test-8147713, ph...)">testNonEmptyContactCreation(ContactData [firstName=test1806125992, lastName=, address=test1960513011, phoneHome=test-8147713, ph...)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
-                        <img width="3%" src="skipped.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.example.tests.GroupCreationTests" hash-for-method="testGroupCreationWithValidDate(GroupData [name=test1062828369, header=, footer=test-997980301])">testGroupCreationWithValidDate(GroupData [name=test1062828369, header=, footer=test-997980301])</a> <!-- method navigator-link -->
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.example.tests.ContactCreationTests" hash-for-method="testNonEmptyContactCreation(ContactData [firstName=, lastName=, address=, phoneHome=, phoneMobile=, phoneWork=, email_1=, email_...)">testNonEmptyContactCreation(ContactData [firstName=, lastName=, address=, phoneHome=, phoneMobile=, phoneWork=, email_1=, email_...)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
-                        <img width="3%" src="skipped.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.example.tests.GroupCreationTests" hash-for-method="testGroupCreationWithValidDate(GroupData [name=test-948382892, header=test-1060168292, footer=test654111719])">testGroupCreationWithValidDate(GroupData [name=test-948382892, header=test-1060168292, footer=test654111719])</a> <!-- method navigator-link -->
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.example.tests.ContactCreationTests" hash-for-method="testNonEmptyContactCreation(ContactData [firstName=test78222435, lastName=, address=, phoneHome=test-1486659775, phoneMobile=tes...)">testNonEmptyContactCreation(ContactData [firstName=test78222435, lastName=, address=, phoneHome=test-1486659775, phoneMobile=tes...)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
-                        <img width="3%" src="skipped.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.example.tests.GroupCreationTests" hash-for-method="testGroupCreationWithValidDate(GroupData [name=test1481458308, header=, footer=])">testGroupCreationWithValidDate(GroupData [name=test1481458308, header=, footer=])</a> <!-- method navigator-link -->
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.example.tests.ContactCreationTests" hash-for-method="testNonEmptyContactCreation(ContactData [firstName=test1531610825, lastName=test352658934, address=test591519004, phoneHome=, ph...)">testNonEmptyContactCreation(ContactData [firstName=test1531610825, lastName=test352658934, address=test591519004, phoneHome=, ph...)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
-                        <img width="3%" src="skipped.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.example.tests.GroupCreationTests" hash-for-method="testGroupCreationWithValidDate(GroupData [name=test-1568777181, header=, footer=test1697648198])">testGroupCreationWithValidDate(GroupData [name=test-1568777181, header=, footer=test1697648198])</a> <!-- method navigator-link -->
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.example.tests.ContactCreationTests" hash-for-method="testNonEmptyContactCreation(ContactData [firstName=test-1678323752, lastName=test-906785007, address=test-617700541, phoneHome=t...)">testNonEmptyContactCreation(ContactData [firstName=test-1678323752, lastName=test-906785007, address=test-617700541, phoneHome=t...)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
-                        <img width="3%" src="skipped.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.example.tests.GroupCreationTests" hash-for-method="testGroupCreationWithValidDate(GroupData [name=test1166151675, header=test-2046113726, footer=test1192025033])">testGroupCreationWithValidDate(GroupData [name=test1166151675, header=test-2046113726, footer=test1192025033])</a> <!-- method navigator-link -->
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.example.tests.ContactCreationTests" hash-for-method="testNonEmptyContactCreation(ContactData [firstName=, lastName=, address=test1392035342, phoneHome=, phoneMobile=test1612744399, ...)">testNonEmptyContactCreation(ContactData [firstName=, lastName=, address=test1392035342, phoneHome=, phoneMobile=test1612744399, ...)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
-                        <img width="3%" src="skipped.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.example.tests.GroupCreationTests" hash-for-method="testGroupCreationWithValidDate(GroupData [name=test-262916633, header=test-1953012522, footer=])">testGroupCreationWithValidDate(GroupData [name=test-262916633, header=test-1953012522, footer=])</a> <!-- method navigator-link -->
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.example.tests.ContactCreationTests" hash-for-method="testNonEmptyContactCreation(ContactData [firstName=, lastName=, address=test384779955, phoneHome=, phoneMobile=, phoneWork=test7...)">testNonEmptyContactCreation(ContactData [firstName=, lastName=, address=test384779955, phoneHome=, phoneMobile=, phoneWork=test7...)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content skipped suite-Default_suite -->
+                    </div> <!-- method-list-content passed suite-Default_suite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -161,98 +175,141 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Default_suite" class="panel Default_suite">
-          <div class="suite-Default_suite-class-skipped">
+          <div class="suite-Default_suite-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="skipped.png"/>
-              <span class="class-name">com.example.tests.GroupCreationTests</span>
+              <img src="failed.png"/>
+              <span class="class-name">com.example.tests.ContactCreationTests</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="testGroupCreationWithValidDate(GroupData [name=test-187779000, header=test-1725940652, footer=test-1897768215])">
-                  </a> <!-- testGroupCreationWithValidDate(GroupData [name=test-187779000, header=test-1725940652, footer=test-1897768215]) -->
-                  <span class="method-name">testGroupCreationWithValidDate</span>
-                  <span class="parameters">(GroupData [name=test-187779000, header=test-1725940652, footer=test-1897768215])</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="testGroupCreationWithValidDate(GroupData [name=, header=test269204306, footer=])">
-                  </a> <!-- testGroupCreationWithValidDate(GroupData [name=, header=test269204306, footer=]) -->
-                  <span class="method-name">testGroupCreationWithValidDate</span>
-                  <span class="parameters">(GroupData [name=, header=test269204306, footer=])</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="testGroupCreationWithValidDate(GroupData [name=test1071839584, header=test-1321854102, footer=test-868575203])">
-                  </a> <!-- testGroupCreationWithValidDate(GroupData [name=test1071839584, header=test-1321854102, footer=test-868575203]) -->
-                  <span class="method-name">testGroupCreationWithValidDate</span>
-                  <span class="parameters">(GroupData [name=test1071839584, header=test-1321854102, footer=test-868575203])</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="testGroupCreationWithValidDate(GroupData [name=, header=test817358869, footer=])">
-                  </a> <!-- testGroupCreationWithValidDate(GroupData [name=, header=test817358869, footer=]) -->
-                  <span class="method-name">testGroupCreationWithValidDate</span>
-                  <span class="parameters">(GroupData [name=, header=test817358869, footer=])</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="testGroupCreationWithValidDate(GroupData [name=test1062828369, header=, footer=test-997980301])">
-                  </a> <!-- testGroupCreationWithValidDate(GroupData [name=test1062828369, header=, footer=test-997980301]) -->
-                  <span class="method-name">testGroupCreationWithValidDate</span>
-                  <span class="parameters">(GroupData [name=test1062828369, header=, footer=test-997980301])</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="testGroupCreationWithValidDate(GroupData [name=test-948382892, header=test-1060168292, footer=test654111719])">
-                  </a> <!-- testGroupCreationWithValidDate(GroupData [name=test-948382892, header=test-1060168292, footer=test654111719]) -->
-                  <span class="method-name">testGroupCreationWithValidDate</span>
-                  <span class="parameters">(GroupData [name=test-948382892, header=test-1060168292, footer=test654111719])</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="testGroupCreationWithValidDate(GroupData [name=test1481458308, header=, footer=])">
-                  </a> <!-- testGroupCreationWithValidDate(GroupData [name=test1481458308, header=, footer=]) -->
-                  <span class="method-name">testGroupCreationWithValidDate</span>
-                  <span class="parameters">(GroupData [name=test1481458308, header=, footer=])</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="testGroupCreationWithValidDate(GroupData [name=test-1568777181, header=, footer=test1697648198])">
-                  </a> <!-- testGroupCreationWithValidDate(GroupData [name=test-1568777181, header=, footer=test1697648198]) -->
-                  <span class="method-name">testGroupCreationWithValidDate</span>
-                  <span class="parameters">(GroupData [name=test-1568777181, header=, footer=test1697648198])</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="testGroupCreationWithValidDate(GroupData [name=test1166151675, header=test-2046113726, footer=test1192025033])">
-                  </a> <!-- testGroupCreationWithValidDate(GroupData [name=test1166151675, header=test-2046113726, footer=test1192025033]) -->
-                  <span class="method-name">testGroupCreationWithValidDate</span>
-                  <span class="parameters">(GroupData [name=test1166151675, header=test-2046113726, footer=test1192025033])</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="testGroupCreationWithValidDate(GroupData [name=test-262916633, header=test-1953012522, footer=])">
-                  </a> <!-- testGroupCreationWithValidDate(GroupData [name=test-262916633, header=test-1953012522, footer=]) -->
-                  <span class="method-name">testGroupCreationWithValidDate</span>
-                  <span class="parameters">(GroupData [name=test-262916633, header=test-1953012522, footer=])</span>
+                  <a name="compareSumCountContacts">
+                  </a> <!-- compareSumCountContacts -->
+                  <span class="method-name">compareSumCountContacts</span>
+                  <div class="stack-trace">java.lang.NullPointerException
+	at com.example.tests.ContactCreationTests.compareSumCountContacts(ContactCreationTests.java:57)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:773)
+	at org.testng.TestRunner.run(TestRunner.java:623)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1185)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1110)
+	at org.testng.TestNG.run(TestNG.java:1018)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:112)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:205)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:176)
+
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Default_suite-class-skipped -->
+          </div> <!-- suite-Default_suite-class-failed -->
+          <div class="suite-Default_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.example.tests.ContactCreationTests</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testNonEmptyContactCreation(ContactData [firstName=test-1695936075, lastName=test344526662, address=test219070672, phoneHome=tes...)">
+                  </a> <!-- testNonEmptyContactCreation(ContactData [firstName=test-1695936075, lastName=test344526662, address=test219070672, phoneHome=tes...) -->
+                  <span class="method-name">testNonEmptyContactCreation</span>
+                  <span class="parameters">(ContactData [firstName=test-1695936075, lastName=test344526662, address=test219070672, phoneHome=test-730589049, phoneMobile=test799361304, phoneWork=, email_1=, email_2=, bDay=26, bMonth=null, bYear=1901, groupName=null, address_2=test1009910794, phoneOther=])</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testNonEmptyContactCreation(ContactData [firstName=, lastName=, address=test1976161841, phoneHome=, phoneMobile=test-1319021744,...)">
+                  </a> <!-- testNonEmptyContactCreation(ContactData [firstName=, lastName=, address=test1976161841, phoneHome=, phoneMobile=test-1319021744,...) -->
+                  <span class="method-name">testNonEmptyContactCreation</span>
+                  <span class="parameters">(ContactData [firstName=, lastName=, address=test1976161841, phoneHome=, phoneMobile=test-1319021744, phoneWork=test1476596950, email_1=, email_2=mail-1712387022@aol.com, bDay=18, bMonth=null, bYear=1908, groupName=null, address_2=, phoneOther=])</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testNonEmptyContactCreation(ContactData [firstName=, lastName=test-876062398, address=, phoneHome=, phoneMobile=, phoneWork=test...)">
+                  </a> <!-- testNonEmptyContactCreation(ContactData [firstName=, lastName=test-876062398, address=, phoneHome=, phoneMobile=, phoneWork=test...) -->
+                  <span class="method-name">testNonEmptyContactCreation</span>
+                  <span class="parameters">(ContactData [firstName=, lastName=test-876062398, address=, phoneHome=, phoneMobile=, phoneWork=test705035480, email_1=, email_2=mail-1275288896@aol.com, bDay=6, bMonth=null, bYear=1902, groupName=null, address_2=, phoneOther=])</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testNonEmptyContactCreation(ContactData [firstName=test1806125992, lastName=, address=test1960513011, phoneHome=test-8147713, ph...)">
+                  </a> <!-- testNonEmptyContactCreation(ContactData [firstName=test1806125992, lastName=, address=test1960513011, phoneHome=test-8147713, ph...) -->
+                  <span class="method-name">testNonEmptyContactCreation</span>
+                  <span class="parameters">(ContactData [firstName=test1806125992, lastName=, address=test1960513011, phoneHome=test-8147713, phoneMobile=test862006604, phoneWork=test1800738963, email_1=mail606324626@aol.com, email_2=, bDay=30, bMonth=null, bYear=1901, groupName=null, address_2=test-1119733639, phoneOther=test1230266454])</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testNonEmptyContactCreation(ContactData [firstName=, lastName=, address=, phoneHome=, phoneMobile=, phoneWork=, email_1=, email_...)">
+                  </a> <!-- testNonEmptyContactCreation(ContactData [firstName=, lastName=, address=, phoneHome=, phoneMobile=, phoneWork=, email_1=, email_...) -->
+                  <span class="method-name">testNonEmptyContactCreation</span>
+                  <span class="parameters">(ContactData [firstName=, lastName=, address=, phoneHome=, phoneMobile=, phoneWork=, email_1=, email_2=mail544115326@aol.com, bDay=21, bMonth=null, bYear=1906, groupName=null, address_2=test-2138318418, phoneOther=])</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testNonEmptyContactCreation(ContactData [firstName=test78222435, lastName=, address=, phoneHome=test-1486659775, phoneMobile=tes...)">
+                  </a> <!-- testNonEmptyContactCreation(ContactData [firstName=test78222435, lastName=, address=, phoneHome=test-1486659775, phoneMobile=tes...) -->
+                  <span class="method-name">testNonEmptyContactCreation</span>
+                  <span class="parameters">(ContactData [firstName=test78222435, lastName=, address=, phoneHome=test-1486659775, phoneMobile=test-1716808549, phoneWork=, email_1=mail-1227705511@aol.com, email_2=, bDay=15, bMonth=null, bYear=1901, groupName=null, address_2=test-1777696545, phoneOther=test-1601781016])</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testNonEmptyContactCreation(ContactData [firstName=test1531610825, lastName=test352658934, address=test591519004, phoneHome=, ph...)">
+                  </a> <!-- testNonEmptyContactCreation(ContactData [firstName=test1531610825, lastName=test352658934, address=test591519004, phoneHome=, ph...) -->
+                  <span class="method-name">testNonEmptyContactCreation</span>
+                  <span class="parameters">(ContactData [firstName=test1531610825, lastName=test352658934, address=test591519004, phoneHome=, phoneMobile=test-224294102, phoneWork=test-153402566, email_1=mail-1346838572@aol.com, email_2=mail-1295249172@aol.com, bDay=17, bMonth=null, bYear=1909, groupName=null, address_2=test-659470773, phoneOther=test1512267456])</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testNonEmptyContactCreation(ContactData [firstName=test-1678323752, lastName=test-906785007, address=test-617700541, phoneHome=t...)">
+                  </a> <!-- testNonEmptyContactCreation(ContactData [firstName=test-1678323752, lastName=test-906785007, address=test-617700541, phoneHome=t...) -->
+                  <span class="method-name">testNonEmptyContactCreation</span>
+                  <span class="parameters">(ContactData [firstName=test-1678323752, lastName=test-906785007, address=test-617700541, phoneHome=test-2001152057, phoneMobile=test1603359612, phoneWork=, email_1=mail395982095@aol.com, email_2=mail-849268104@aol.com, bDay=23, bMonth=null, bYear=1908, groupName=null, address_2=test833961708, phoneOther=])</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testNonEmptyContactCreation(ContactData [firstName=, lastName=, address=test1392035342, phoneHome=, phoneMobile=test1612744399, ...)">
+                  </a> <!-- testNonEmptyContactCreation(ContactData [firstName=, lastName=, address=test1392035342, phoneHome=, phoneMobile=test1612744399, ...) -->
+                  <span class="method-name">testNonEmptyContactCreation</span>
+                  <span class="parameters">(ContactData [firstName=, lastName=, address=test1392035342, phoneHome=, phoneMobile=test1612744399, phoneWork=test435676281, email_1=, email_2=mail832532789@aol.com, bDay=8, bMonth=null, bYear=1912, groupName=null, address_2=, phoneOther=])</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testNonEmptyContactCreation(ContactData [firstName=, lastName=, address=test384779955, phoneHome=, phoneMobile=, phoneWork=test7...)">
+                  </a> <!-- testNonEmptyContactCreation(ContactData [firstName=, lastName=, address=test384779955, phoneHome=, phoneMobile=, phoneWork=test7...) -->
+                  <span class="method-name">testNonEmptyContactCreation</span>
+                  <span class="parameters">(ContactData [firstName=, lastName=, address=test384779955, phoneHome=, phoneMobile=, phoneWork=test724021248, email_1=, email_2=, bDay=26, bMonth=null, bYear=1903, groupName=null, address_2=, phoneOther=test709903627])</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Default_suite-class-passed -->
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\admin\AppData\Local\Temp\testng-eclipse--1197450729\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\admin\AppData\Local\Temp\testng-eclipse--757667027\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -261,7 +318,7 @@
 &lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;Default suite&quot;&gt;
   &lt;test verbose=&quot;2&quot; name=&quot;Default test&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.example.tests.GroupCreationTests&quot;/&gt;
+      &lt;class name=&quot;com.example.tests.ContactCreationTests&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -301,52 +358,56 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(10);
+data.addRows(11);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'testGroupCreationWithValidDate')
-data.setCell(0, 2, 'com.example.tests.GroupCreationTests')
-data.setCell(0, 3, 1);
+data.setCell(0, 1, 'compareSumCountContacts')
+data.setCell(0, 2, 'com.example.tests.ContactCreationTests')
+data.setCell(0, 3, 5636);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'testGroupCreationWithValidDate')
-data.setCell(1, 2, 'com.example.tests.GroupCreationTests')
-data.setCell(1, 3, 1);
+data.setCell(1, 1, 'testNonEmptyContactCreation')
+data.setCell(1, 2, 'com.example.tests.ContactCreationTests')
+data.setCell(1, 3, 3609);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'testGroupCreationWithValidDate')
-data.setCell(2, 2, 'com.example.tests.GroupCreationTests')
-data.setCell(2, 3, 1);
+data.setCell(2, 1, 'testNonEmptyContactCreation')
+data.setCell(2, 2, 'com.example.tests.ContactCreationTests')
+data.setCell(2, 3, 1634);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'testGroupCreationWithValidDate')
-data.setCell(3, 2, 'com.example.tests.GroupCreationTests')
-data.setCell(3, 3, 0);
+data.setCell(3, 1, 'testNonEmptyContactCreation')
+data.setCell(3, 2, 'com.example.tests.ContactCreationTests')
+data.setCell(3, 3, 1268);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'testGroupCreationWithValidDate')
-data.setCell(4, 2, 'com.example.tests.GroupCreationTests')
-data.setCell(4, 3, 0);
+data.setCell(4, 1, 'testNonEmptyContactCreation')
+data.setCell(4, 2, 'com.example.tests.ContactCreationTests')
+data.setCell(4, 3, 1212);
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'testGroupCreationWithValidDate')
-data.setCell(5, 2, 'com.example.tests.GroupCreationTests')
-data.setCell(5, 3, 0);
+data.setCell(5, 1, 'testNonEmptyContactCreation')
+data.setCell(5, 2, 'com.example.tests.ContactCreationTests')
+data.setCell(5, 3, 1197);
 data.setCell(6, 0, 6)
-data.setCell(6, 1, 'testGroupCreationWithValidDate')
-data.setCell(6, 2, 'com.example.tests.GroupCreationTests')
-data.setCell(6, 3, 0);
+data.setCell(6, 1, 'testNonEmptyContactCreation')
+data.setCell(6, 2, 'com.example.tests.ContactCreationTests')
+data.setCell(6, 3, 1129);
 data.setCell(7, 0, 7)
-data.setCell(7, 1, 'testGroupCreationWithValidDate')
-data.setCell(7, 2, 'com.example.tests.GroupCreationTests')
-data.setCell(7, 3, 0);
+data.setCell(7, 1, 'testNonEmptyContactCreation')
+data.setCell(7, 2, 'com.example.tests.ContactCreationTests')
+data.setCell(7, 3, 1121);
 data.setCell(8, 0, 8)
-data.setCell(8, 1, 'testGroupCreationWithValidDate')
-data.setCell(8, 2, 'com.example.tests.GroupCreationTests')
-data.setCell(8, 3, 0);
+data.setCell(8, 1, 'testNonEmptyContactCreation')
+data.setCell(8, 2, 'com.example.tests.ContactCreationTests')
+data.setCell(8, 3, 1113);
 data.setCell(9, 0, 9)
-data.setCell(9, 1, 'testGroupCreationWithValidDate')
-data.setCell(9, 2, 'com.example.tests.GroupCreationTests')
-data.setCell(9, 3, 0);
+data.setCell(9, 1, 'testNonEmptyContactCreation')
+data.setCell(9, 2, 'com.example.tests.ContactCreationTests')
+data.setCell(9, 3, 1080);
+data.setCell(10, 0, 10)
+data.setCell(10, 1, 'testNonEmptyContactCreation')
+data.setCell(10, 2, 'com.example.tests.ContactCreationTests')
+data.setCell(10, 3, 1011);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 3 ms</span>
+              <span class="suite-total-time">Total running time: 20 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -372,53 +433,61 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.example.tests.GroupCreationTests</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.example.tests.ContactCreationTests</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">setUp</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-test before -->
               <div class="test-method">
-                <span class="method-name">testGroupCreationWithValidDate(GroupData [name=test-187779000, header=test-1725940652, footer=test-1897768215])</span>
-                <span class="method-start">2846 ms</span>
+                <img src="failed.png">
+                </img>
+                <span class="method-name">compareSumCountContacts</span>
+                <span class="method-start">3145 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">testGroupCreationWithValidDate(GroupData [name=, header=test269204306, footer=])</span>
-                <span class="method-start">2847 ms</span>
+                <span class="method-name">testNonEmptyContactCreation(ContactData [firstName=, lastName=, address=test1392035342, phoneHome=, phoneMobile=test1612744399, ...)</span>
+                <span class="method-start">9182 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">testGroupCreationWithValidDate(GroupData [name=, header=test817358869, footer=])</span>
-                <span class="method-start">2848 ms</span>
+                <span class="method-name">testNonEmptyContactCreation(ContactData [firstName=, lastName=test-876062398, address=, phoneHome=, phoneMobile=, phoneWork=test...)</span>
+                <span class="method-start">10816 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">testGroupCreationWithValidDate(GroupData [name=test1481458308, header=, footer=])</span>
-                <span class="method-start">2849 ms</span>
+                <span class="method-name">testNonEmptyContactCreation(ContactData [firstName=test78222435, lastName=, address=, phoneHome=test-1486659775, phoneMobile=tes...)</span>
+                <span class="method-start">11939 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">testGroupCreationWithValidDate(GroupData [name=test-262916633, header=test-1953012522, footer=])</span>
-                <span class="method-start">2849 ms</span>
+                <span class="method-name">testNonEmptyContactCreation(ContactData [firstName=test1806125992, lastName=, address=test1960513011, phoneHome=test-8147713, ph...)</span>
+                <span class="method-start">13137 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">testGroupCreationWithValidDate(GroupData [name=test-1568777181, header=, footer=test1697648198])</span>
-                <span class="method-start">2850 ms</span>
+                <span class="method-name">testNonEmptyContactCreation(ContactData [firstName=, lastName=, address=test1976161841, phoneHome=, phoneMobile=test-1319021744,...)</span>
+                <span class="method-start">14350 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">testGroupCreationWithValidDate(GroupData [name=test1071839584, header=test-1321854102, footer=test-868575203])</span>
-                <span class="method-start">2851 ms</span>
+                <span class="method-name">testNonEmptyContactCreation(ContactData [firstName=test1531610825, lastName=test352658934, address=test591519004, phoneHome=, ph...)</span>
+                <span class="method-start">15619 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">testGroupCreationWithValidDate(GroupData [name=test1166151675, header=test-2046113726, footer=test1192025033])</span>
-                <span class="method-start">2851 ms</span>
+                <span class="method-name">testNonEmptyContactCreation(ContactData [firstName=, lastName=, address=test384779955, phoneHome=, phoneMobile=, phoneWork=test7...)</span>
+                <span class="method-start">19229 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">testGroupCreationWithValidDate(GroupData [name=test1062828369, header=, footer=test-997980301])</span>
-                <span class="method-start">2852 ms</span>
+                <span class="method-name">testNonEmptyContactCreation(ContactData [firstName=, lastName=, address=, phoneHome=, phoneMobile=, phoneWork=, email_1=, email_...)</span>
+                <span class="method-start">20240 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">testGroupCreationWithValidDate(GroupData [name=test-948382892, header=test-1060168292, footer=test654111719])</span>
-                <span class="method-start">2852 ms</span>
+                <span class="method-name">testNonEmptyContactCreation(ContactData [firstName=test-1695936075, lastName=test344526662, address=test219070672, phoneHome=tes...)</span>
+                <span class="method-start">21355 ms</span>
               </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testNonEmptyContactCreation(ContactData [firstName=test-1678323752, lastName=test-906785007, address=test-617700541, phoneHome=t...)</span>
+                <span class="method-start">22436 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-test after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">23567 ms</span>
+              </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->
